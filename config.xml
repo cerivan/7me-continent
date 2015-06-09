@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = 'http://www.w3.org/ns/widgets'
 	xmlns:gap = 'http://phonegap.com/ns/1.0'
-        id = "com.cerivan.rb"
+        id = "com.cerivan.7eco"
         version = "1.0.0">
 	
 	<name>7me-continent</name>
@@ -13,10 +13,9 @@
 	<author href="http://www.cerivan.com" email="mail@cerivan.com">
 		Cerivan
 	</author>
-	    
+	<preference name="phonegap-version" value="3.7.0" />    
 	<preference name="permissions" value="none"/>
 	<preference name="fullscreen" value="true"/>
-	<preference name="DisallowOverscroll" value="true" />
 	<access origin="*" subdomains="true" />
 
 	<!-- to enable individual permissions use the following examples -->	
