@@ -1,7 +1,7 @@
-$(document).ready(function() {		
+jQuery(document).ready(function() {		
 	
 	
-	$( ".btn-action-photo" ).on( "click", function(){
+	jQuery( ".btn-action-photo" ).click(function(){
 		getImage();
 	});
 	
