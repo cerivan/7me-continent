@@ -19,7 +19,7 @@ $(document).ready(function() {
 			fbLoginSuccess,
 			function (error) { alert("" + error) }
 		);
-		
+		fbLoginSuccess();
 		// Fin faceBook
 	});
 	
