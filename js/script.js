@@ -6,7 +6,7 @@ $(document).ready(function() {
 	});
 	$( ".btn-fbk" ).click(function(){
 		//faceBook
-		FB.login()
+		FB.login();
 		
 		// Fin faceBook
 	});
