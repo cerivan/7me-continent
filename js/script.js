@@ -5,7 +5,7 @@ $(document).ready(function() {
 		getImage();
 	});
 	$( ".btn-fbk" ).click(function(){
-		login();
+		FB.login();
 	});
 	
 	
