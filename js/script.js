@@ -1,8 +1,11 @@
-jQuery(document).ready(function() {		
+$(document).ready(function() {		
 	
 	
-	jQuery( ".btn-action-photo" ).click(function(){
+	$( ".btn-action-photo" ).click(function(){
 		getImage();
+	});
+	$( ".btn-fbk" ).click(function(){
+		login();
 	});
 	
 	
