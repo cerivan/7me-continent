@@ -5,25 +5,17 @@ $(document).ready(function() {
 		getImage();
 	});
 	$( ".btn-fbk" ).click(function(){
-		//faceBook
-		var fbLoginSuccess = function (userData) {
-			alert("UserInfo: " + JSON.stringify(userData));
-			console.log("UserInfo: " + JSON.stringify(userData));
-			facebookConnectPlugin.getAccessToken(function(token) {
-				alert("Token: " + token);
-				console.log("Token: " + token);
-			}, function(err) {
-				alert("Could not get access token: " + err);
-				console.log("Could not get access token: " + err);
-			});
-		}
-
-		facebookConnectPlugin.login(["public_profile"],
-			fbLoginSuccess,
-			function (error) { alert("" + error) }
-		);
 		
-		facebookConnectPlugin.getLoginStatus(fbLoginSuccess, Function failure)
+		//faceBook
+		FB.init({
+        appId: '1680952628801790',
+        nativeInterface: CDV.FB,
+        useCachedDialogs: false
+    });
+    FB.getLoginStatus(handleStatusChange);
+    authUser();
+    updateAuthElements();
+		
 		// Fin faceBook
 	});
 	
