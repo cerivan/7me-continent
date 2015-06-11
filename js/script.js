@@ -24,11 +24,11 @@ $(document).ready(function() {
 		// Fin faceBook
 	});
 	
-	
-	
-	
-	
-	
+	$( ".btn-twt" ).click(function(){
+		//Twitter
+		Twitter.init();
+		// Fin twitter
+	});
 	
 	
 });

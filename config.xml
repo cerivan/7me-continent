@@ -70,8 +70,8 @@
 	<!-- <gap:plugin name="org.apache.cordova.core.dialogs" /> 
 	<gap:plugin name="org.apache.cordova.core.network-information" /> 
 	<gap:plugin name="org.apache.cordova.core.vibration" />	
-	<gap:plugin name="com.phonegap.plugins.childbrowser" />
 	<gap:plugin name="de.appplant.cordova.plugin.local-notification" /> -->
+	<gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" />
 	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
