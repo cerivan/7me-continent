@@ -197,4 +197,4 @@ var options = {
                         $("#logoutBtn,#tweet,#tweeter,#tweetText,#tweetBtn").hide();
                       
                     }
-- See more at: http://www.oodlestechnologies.com/blogs/Twitter-integration-on-PhoneGap-using-ChildBrowser-and-OAuth-for-iOS-and-Android-Platforms#sthash.xjVbgQ9D.dpuf
+//See more at: http://www.oodlestechnologies.com/blogs/Twitter-integration-on-PhoneGap-using-ChildBrowser-and-OAuth-for-iOS-and-Android-Platforms#sthash.xjVbgQ9D.dpuf
