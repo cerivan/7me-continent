@@ -13,7 +13,13 @@ var pictureSource;   // picture source
 		
 		var root = this;
                 cb = window.plugins.childBrowser;
-               
+                if(!localStorage.getItem(twitterKey)){
+                        alert('yes')
+                }
+                else {
+                    alert('no')
+                }
+                     
                 if (cb != null) {
                     cb.onLocationChange = function(loc){ root.locChanged(loc); };
                     cb.onClose = function(){root.onCloseBrowser()};

@@ -13,8 +13,8 @@ function onOpenExternal() {
 var oauth; // It Holds the oAuth data request
 var requestParams; // Specific param related to request
 var options = {
-	consumerKey: 'xxxxxxxxxxxxxxx', // YOUR Twitter CONSUMER_KEY
-                consumerSecret: 'xxxxxxxxxxxxx', // YOUR Twitter CONSUMER_SECRET
+	consumerKey: 'n7YNkcGVSlCL0O4exLITblSwsPhuWL98ZYvax9oKpZz2KFSXAe', // YOUR Twitter CONSUMER_KEY
+                consumerSecret: 'DKgvKNU7CvlTKmvq5epk7dZTl', // YOUR Twitter CONSUMER_SECRET
                 callbackUrl: "http://Your-callback-URL/" }; // YOU have to replace it on one more Place                   
             var twitterKey = "twtrKey"; // This key is used for storing Information related
                      
