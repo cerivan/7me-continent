@@ -10,6 +10,25 @@ var pictureSource;   // picture source
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+		
+		var root = this;
+                cb = window.plugins.childBrowser;
+                if(!localStorage.getItem(twitterKey)){
+                        $("#loginBtn").show();
+                        $("#logoutBtn").hide();
+                }
+                else {
+                    $("#loginBtn").hide();
+                    $("#logoutBtn").show();
+                }
+                     
+                if (cb != null) {
+                    cb.onLocationChange = function(loc){ root.locChanged(loc); };
+                    cb.onClose = function(){root.onCloseBrowser()};
+                    cb.onOpenExternal = function(){root.onOpenExternal();};
+                }
+           
+		
     }    
        
     
