@@ -26,7 +26,15 @@ $(document).ready(function() {
 	
 	$( ".btn-twt" ).click(function(){
 		//Twitter
-		Twitter.init();
+		TwitterConnect.login(
+  function(result) {
+    console.log('Successful login!');
+    console.log(result);
+  }, function(error) {
+    console.log('Error logging in');
+    console.log(error);
+  }
+);
 		// Fin twitter
 	});
 	

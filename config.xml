@@ -55,6 +55,8 @@
 
 	
 	<preference name="load-url-timeout" value="30000" />
+	<preference name="TwitterConsumerKey" value="<Twitter Consumer Key>" />
+	<preference name="TwitterConsumerSecret" value="<Twitter Consumer Secret>" />
 
 	
 	<gap:plugin name="org.apache.cordova.camera"/>
