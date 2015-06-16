@@ -19,6 +19,7 @@ var pictureSource;   // picture source
 		// these are used for slide left/right only currently
 		window.plugins.nativepagetransitions.globalOptions.fixedPixelsTop = 64;
 		window.plugins.nativepagetransitions.globalOptions.fixedPixelsBottom = 48;
+		new kendo.mobile.Application(document.body, {transition: 'slide'});
 		//Fin Transitions
 		
     }    

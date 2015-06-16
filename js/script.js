@@ -9,8 +9,10 @@ $(document).ready(function() {
 		//faceBook
 		var fbLoginSuccess = function (userData) {
 			alert("UserInfo: " + JSON.stringify(userData));
+			console.log("UserInfo: " + JSON.stringify(userData));
 			facebookConnectPlugin.getAccessToken(function(token) {
 				alert("Token: " + token);
+				console.log("Token: " + token);
 			}, function(err) {
 				alert("Could not get access token: " + err);
 			});
