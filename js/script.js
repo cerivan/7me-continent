@@ -22,7 +22,7 @@ $(document).ready(function() {
 			fbLoginSuccess,
 			function (error) { alert("" + error) }
 		);
-		facebookConnectPlugin.getLoginStatus();;;
+		facebookConnectPlugin.getLoginStatus(fbLoginSuccess, function (error) { alert("" + error) });
 		// Fin faceBook
 	});
 	
