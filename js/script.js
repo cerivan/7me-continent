@@ -26,7 +26,7 @@ $(document).ready(function() {
 	
 	$( ".btn-twt" ).click(function(){
 		//Twitter
-		Twitter.init();
+		
 		// Fin twitter
 	});
 	
