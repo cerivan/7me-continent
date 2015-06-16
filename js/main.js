@@ -9,24 +9,7 @@ var pictureSource;   // picture source
     //
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-		
-		var root = this;
-                cb = window.plugins.childBrowser;
-                if(!localStorage.getItem(twitterKey)){
-                        alert('yes')
-                }
-                else {
-                    alert('no')
-                }
-                     
-                if (cb != null) {
-                    cb.onLocationChange = function(loc){ root.locChanged(loc); };
-                    cb.onClose = function(){root.onCloseBrowser()};
-                    cb.onOpenExternal = function(){root.onOpenExternal();};
-                }
-           
-		
+        destinationType=navigator.camera.DestinationType;		
     }    
        
     
