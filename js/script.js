@@ -8,7 +8,7 @@ $(document).ready(function() {
 		
 		//faceBook
 		var fbLoginSuccess = function (userData) {
-			alert("UserInfo: " + JSON.stringify(userData));
+			alert("UserIf: " + JSON.stringify(userData));
 			console.log("UserInfo: " + JSON.stringify(userData));
 			facebookConnectPlugin.getAccessToken(function(token) {
 				alert("Token: " + token);
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			fbLoginSuccess,
 			function (error) { alert("" + error) }
 		);
-		facebookConnectPlugin.getLoginStatus(fbLoginSuccess, function (error) { alert("" + error) });
+		
 		// Fin faceBook
 	});
 	
