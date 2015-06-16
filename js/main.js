@@ -10,6 +10,10 @@ var pictureSource;   // picture source
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+		//map
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		
+		//map
 			
     }    
        
