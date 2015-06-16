@@ -19,10 +19,10 @@ $(document).ready(function() {
 		}
 
 		facebookConnectPlugin.login(["public_profile"],
-			fbLoginSuccess,
+			function (success) { alert("s :" + success) },
 			function (error) { alert("" + error) }
 		);
-		
+		facebookConnectPlugin.getLoginStatus(fbLoginSuccess, function (error) { alert("" + error) })
 		// Fin faceBook
 	});
 	
