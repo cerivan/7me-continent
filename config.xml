@@ -76,7 +76,7 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
-
+	<gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
 	
     <!-- Define app icon for each platform. -->
 	<!-- <icon src="img/icon.png" width="48" height="48"/>
