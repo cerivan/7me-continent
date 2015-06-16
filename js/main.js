@@ -10,10 +10,7 @@ var pictureSource;   // picture source
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
-		//Transitions
-		new kendo.mobile.Application(document.body, {transition: 'slide'});
-		//Fin Transitions
-		
+				
     }    
        
     
