@@ -8,7 +8,7 @@
 
 
 
-var onSuccess = function(position) {
+function onSuccess(position) {
 		var longitude = position.coords.longitude;
         var latitude = position.coords.latitude;
         var latLong = new google.maps.LatLng(latitude, longitude);
@@ -26,11 +26,6 @@ var onSuccess = function(position) {
               map: map,
               title: 'my location'
           });
-    },
+    }
 
-// onError Callback receives a PositionError object
-//
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n');
-}
+function onError() { alert('onError!'); }
