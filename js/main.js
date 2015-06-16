@@ -11,11 +11,15 @@ var pictureSource;   // picture source
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
 		//Transitions
-		window.plugins.nativepagetransitions.slide({
-			// the defaults for direction, duration, etc are all fine
-			"href" : "accueil.html"
-		});
-
+		window.plugins.nativepagetransitions.globalOptions.duration = 700;
+		window.plugins.nativepagetransitions.globalOptions.iosdelay = 100;
+		window.plugins.nativepagetransitions.globalOptions.androiddelay = 150;
+		window.plugins.nativepagetransitions.globalOptions.winphonedelay = 175;
+		window.plugins.nativepagetransitions.globalOptions.slowdownfactor = 8;
+		// these are used for slide left/right only currently
+		window.plugins.nativepagetransitions.globalOptions.fixedPixelsTop = 64;
+		window.plugins.nativepagetransitions.globalOptions.fixedPixelsBottom = 48;
+		//Fin Transitions
 		
     }    
        
