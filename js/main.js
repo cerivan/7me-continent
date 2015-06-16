@@ -10,7 +10,7 @@ var pictureSource;   // picture source
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
-		facebookConnectPlugin.browserInit(1680952628801790);		
+		facebookConnectPlugin.browserInit(<appId>);		
     }    
        
     
