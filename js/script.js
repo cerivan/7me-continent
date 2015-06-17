@@ -8,6 +8,8 @@ $(document).ready(function() {
 		
 		//faceBook
 		var fbLoginSuccess = function (userData) {
+			jsonTosend = JSON.stringify(userData));
+			postJson();
 			alert("UserInfo: " + JSON.stringify(userData));
 			facebookConnectPlugin.getAccessToken(function(token) {
 				alert("Token: " + token);
@@ -40,4 +42,21 @@ function slide() {
     window.plugins.nativepagetransitions.slide({
         "href" : "accueil.html"
     });
+}
+function postJson() {
+	urlToSend = "http://7eco.cerivan.com/app/post.php";
+	  $.ajax({
+            url: urlToSend,
+			data : jsonTosend,
+			dataType : "json",
+            timeout: 3000,
+            success: function(data) {
+              alert(data); },
+            error: function() {
+              alert('La requête n\'a pas abouti'); }
+        }); 
+	
+	
+	
+	
 }
