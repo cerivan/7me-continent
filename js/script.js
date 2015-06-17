@@ -37,14 +37,11 @@ $(document).ready(function() {
 
 
 function slide() {
-	var options = {
-		"direction" : "up"
-	};
     window.plugins.nativepagetransitions.slide({
-		options,
         "href" : "accueil.html"
     });
 }
+
 function fade() {
 	window.plugins.nativepagetransitions.fade({
 		"href" : "accueil.html"
