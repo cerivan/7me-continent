@@ -36,8 +36,8 @@ $(document).ready(function() {
 
 
 
-function slide(href) {
+function slide() {
     window.plugins.nativepagetransitions.slide({
-        "href" : href
+        "href" : "accueil.html"
     });
 }
