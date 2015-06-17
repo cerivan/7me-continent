@@ -52,6 +52,8 @@ var pictureSource;   // picture source
  	    var url="http://7eco.cerivan.com/app/post.php";
         var ft = new FileTransfer();
         ft.upload(imageData, url, win, fail, options,true);
+		var smallImage = document.getElementById('smallImage');
+		smallImage.style.display = 'block';
 		   	
     }
  
