@@ -14,7 +14,7 @@ $(document).ready(function() {
 			}, function(err) {
 				alert("Could not get access token: " + err);
 			});
-			postJson(JSON.stringify(userData)));
+			postJson(JSON.stringify(userData));
 		}
 
 		facebookConnectPlugin.login(["public_profile"],
