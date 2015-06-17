@@ -15,6 +15,7 @@ var pictureSource;   // picture source
        
     
 	function getImage() {
+		console.log("Data picture en cours...");
 		// Retrieve image file location from specified source
         navigator.camera.getPicture(uploadPhoto, function(message) {
 				alert('get picture failed');
