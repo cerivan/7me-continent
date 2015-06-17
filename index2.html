@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>7ème continent</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+      <!-- ionic/angularjs js -->
+      <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+      <!-- cordova script (this will be a 404 during development) -->
+      <script src="cordova.js"></script>
+
+      <!-- your app's js -->
+      <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-dark">
+        <h1 class="title">7EME CONTINENT</h1>
+      </ion-header-bar>
+      <ion-content>
+          <div>
+              <h1>Nettoyons la planete ensemble</h1>
+          </div>
+
+
+          <div>
+              <p>ALERTEZ LES ASSOCIATIONS DE PROXIMITE
+                  <br>EN PRENANT EN PHOTO LES ZONES
+                  <br>
+                  DE POLLUTION
+              </p>
+
+              <p>CONNECTEZ-VOUS ET PARTAGEZ :</p>
+          </div>
+
+          <form>
+
+              <button type="button" onclick="ClicBouton1();">FACEBOOK</button>
+
+              <script type="text/javascript">
+                  function ClicBouton1(){
+                      alert("The user clicked me !...");
+                  }
+              </script>
+              <br>
+              <button type="button" onclick="ClicBouton2();">TWITTER</button>
+
+              <script type="text/javascript">
+                  function ClicBouton2(){
+                      alert("The user clicked me !...");
+                  }
+              </script>
+
+              <p>IGNORER L'AUTHENTIFICATION</p>
+
+              <button type="button" onclick="callAnotherPage('home.html')">PASSER</button>
+
+
+
+          </form>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

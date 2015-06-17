@@ -1,0 +1,17 @@
+/* Empty. Add your own CSS if you like */
+h1{
+    text-align: center;
+    color: white;
+}
+button{
+    margin:0 auto;
+    display:block;
+}
+p{
+    text-align:center;
+    color: white;
+}
+
+ion-content{
+    background: #00f;
+}
