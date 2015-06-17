@@ -36,8 +36,12 @@ $(document).ready(function() {
 
 
 
-function slide() {
+function slide(direction) {
+	var options = {
+		"direction" : direction
+	};
     window.plugins.nativepagetransitions.slide({
+		options,
         "href" : "accueil.html"
     });
 }
