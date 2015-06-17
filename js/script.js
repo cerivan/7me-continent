@@ -41,9 +41,3 @@ function slide() {
         "href" : "accueil.html"
     });
 }
-
-function fade() {
-	window.plugins.nativepagetransitions.fade({
-		"href" : "accueil.html"
-    });
-}
