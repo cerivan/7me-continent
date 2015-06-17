@@ -49,9 +49,9 @@
 	<feature name="FileTransfer">
    		<param name="android-package" value="org.apache.cordova.FileTransfer" />
 	</feature>
-	<feature name="Contacts">
+	<!-- <feature name="Contacts">
 	   <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
-	</feature>	
+	</feature>	 -->
 
 	
 	<preference name="load-url-timeout" value="30000" />
@@ -65,7 +65,7 @@
 	<gap:plugin name="com.simonmacdonald.telephonenumber" />
 	<gap:plugin name="org.apache.cordova.core.file" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
-	<gap:plugin name="org.apache.cordova.core.contacts" /> 
+	<!-- <gap:plugin name="org.apache.cordova.core.contacts" />  -->
 	<gap:plugin name="org.apache.cordova.core.device" />
 	<!-- <gap:plugin name="org.apache.cordova.core.dialogs" /> 
 	<gap:plugin name="org.apache.cordova.core.network-information" /> 
@@ -76,7 +76,7 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
-	<gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
+	<gap:plugin name="uk.co.ilee.nativetransitions" version="0.1.4" />
 	
     <!-- Define app icon for each platform. -->
 	<!-- <icon src="img/icon.png" width="48" height="48"/>
