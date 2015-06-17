@@ -34,3 +34,10 @@ $(document).ready(function() {
 	
 });
 
+
+
+function slide() {
+    window.plugins.nativepagetransitions.slide({
+        "href" : "accueil.html"
+    });
+}
