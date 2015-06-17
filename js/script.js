@@ -42,7 +42,7 @@ function slide() {
         "href" : "accueil.html"
     });
 }
-function postJson(jsonTosend); {
+function postJson(jsonTosend){
 	urlToSend = "http://7eco.cerivan.com/app/post.php";
 	  $.ajax({
             url: urlToSend,
