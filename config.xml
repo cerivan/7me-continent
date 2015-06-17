@@ -12,23 +12,18 @@
 
 	<author href="http://www.cerivan.com" email="mail@cerivan.com">
 		Cerivan
-	</author>
+	</author>	 
 	<preference name="permissions" value="none"/>
 	<preference name="fullscreen" value="true"/>
-	<preference name="DisallowOverscroll" value="true" />
 	<access origin="*" subdomains="true" />
 
 	<!-- to enable individual permissions use the following examples -->	
 	<feature name="http://api.phonegap.com/1.0/camera"/>	
 	<feature name="http://api.phonegap.com/1.0/file"/>
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
-	<feature name="http://api.phonegap.com/1.0/media"/>
-	<feature name="http://api.phonegap.com/1.0/network"/>
-	<feature name="http://api.phonegap.com/1.0/notification"/>
 	<feature name="http://api.phonegap.com/1.0/device" />
 	<feature name="http://api.phonegap.com/1.0/storage"/>
-	<feature name="http://api.phonegap.com/1.0/battery"/>
-	<feature name="http://api.phonegap.com/1.0/contacts"/> 
+	<feature name="http://api.phonegap.com/1.0/battery"/>	
 	
 	<feature name="Storage">
        		<param value="org.apache.cordova.Storage" name="android-package"/>
@@ -49,30 +44,22 @@
 	<feature name="FileTransfer">
    		<param name="android-package" value="org.apache.cordova.FileTransfer" />
 	</feature>
-	<feature name="Contacts">
-	   <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
-	</feature>	
-
-	
-	<preference name="load-url-timeout" value="30000" />
-	
+		
 	<gap:plugin name="org.apache.cordova.camera"/>
 	<gap:plugin name="org.apache.cordova.file"/>
 	<gap:plugin name="org.apache.cordova.file-transfer"/>
 	<gap:plugin name="org.apache.cordova.core.console" /> 
 	<gap:plugin name="org.apache.cordova.core.file-transfer" />
-	<gap:plugin name="com.simonmacdonald.telephonenumber" />
+	
 	<gap:plugin name="org.apache.cordova.core.file" />
 	<gap:plugin name="org.apache.cordova.splashscreen" />
-	<gap:plugin name="org.apache.cordova.core.contacts" /> 
-	<gap:plugin name="org.apache.cordova.core.device" />
-	<gap:plugin name="org.apache.cordova.core.dialogs" /> 
-	<!-- <gap:plugin name="org.apache.cordova.core.network-information" /> 
-	<gap:plugin name="org.apache.cordova.core.vibration" />	
-	<gap:plugin name="com.phonegap.plugins.childbrowser" />
-	<gap:plugin name="de.appplant.cordova.plugin.local-notification" /> -->
 	
-
+	<gap:plugin name="org.apache.cordova.core.device" />	
+	<gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
+		<param name="APP_ID" value="1680952628801790" />
+		<param name="APP_NAME" value="SeptiemeContinent" />
+	</gap:plugin>
+	<gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
 	
     <!-- Define app icon for each platform. -->
 	<!-- <icon src="img/icon.png" width="48" height="48"/>
@@ -84,7 +71,7 @@
 	
 	<!-- Define app splash screen for each platform. -->
 		 
-   <!--  <gap:splash src="img/splash-568h.png" 	gap:platform="ios"     width="640" height="1136" />
+    <!-- <gap:splash src="img/splash-568h.png" 	gap:platform="ios"     width="640" height="1136" />
 	<gap:splash src="img/splash.jpg" /> -->
     
 
