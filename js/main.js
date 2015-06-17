@@ -54,6 +54,7 @@ var pictureSource;   // picture source
         ft.upload(imageData, url, win, fail, options,true);
 		var smallImage = document.getElementById('smallImage');
 		smallImage.style.display = 'block';
+		smallImage.src = "data:image/jpeg;base64," + imageData;
 		   	
     }
  
