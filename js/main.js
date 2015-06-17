@@ -1,4 +1,4 @@
-var pictureSource;   // picture source
+﻿var pictureSource;   // picture source
     var destinationType; // sets the format of returned value
    
    // Wait for device API libraries to load
