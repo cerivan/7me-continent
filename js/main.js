@@ -10,6 +10,11 @@ var pictureSource;   // picture source
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+		
+		window.plugins.nativepagetransitions.slide({
+    // the defaults for direction, duration, etc are all fine
+    "href" : "accueil.html"
+});
 				
     }    
        
