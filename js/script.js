@@ -8,15 +8,13 @@ $(document).ready(function() {
 		
 		//faceBook
 		var fbLoginSuccess = function (userData) {
-			jsonTosend = JSON.stringify(userData));
-			
 			alert("UserInfo: " + JSON.stringify(userData));
 			facebookConnectPlugin.getAccessToken(function(token) {
 				alert("Token: " + token);
 			}, function(err) {
 				alert("Could not get access token: " + err);
 			});
-			postJson(jsonTosend);
+			postJson(JSON.stringify(userData)));
 		}
 
 		facebookConnectPlugin.login(["public_profile"],
