@@ -13,7 +13,7 @@
 	<author href="http://www.cerivan.com" email="mail@cerivan.com">
 		Cerivan
 	</author>	 
-	
+	<preference name='phonegap-version' value='cli-5.1.1' />
 	<preference name="fullscreen" value="true"/>
 	<access origin="*" subdomains="true" />
 
