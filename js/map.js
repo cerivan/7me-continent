@@ -1,9 +1,6 @@
 ﻿/**
  * Created by okalukembi on 03/06/2015.
  */
-
- 
- 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 function onSuccess(position) {

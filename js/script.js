@@ -33,3 +33,11 @@ $(document).ready(function() {
 
 	
 });
+
+
+
+function slide(href) {
+    window.plugins.nativepagetransitions.slide({
+        "href" : href
+    });
+}
