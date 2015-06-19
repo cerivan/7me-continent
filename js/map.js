@@ -116,7 +116,8 @@ function onSuccess(position) {
     var marker = new google.maps.Marker({
         map: theMap,
         draggable: true,
-        position: new google.maps.LatLng(current_lat, current_lng),		
+        //position: new google.maps.LatLng(current_lat, current_lng),
+		position: theMap.getCenter(),
         visible: true,
         icon: image,
         title:'Title' // Title
