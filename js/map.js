@@ -106,7 +106,7 @@ function onSuccess(position) {
 
 
     var myMapOptions = {
-        zoom: 10
+        zoom: 15
         ,center: secheltLoc
         ,mapTypeId: google.maps.MapTypeId.NORMAL
     };
@@ -115,20 +115,16 @@ function onSuccess(position) {
     theMap.setOptions({styles:styles});
     var marker = new google.maps.Marker({
         map: theMap,
-        draggable: false,
-        //position: new google.maps.LatLng(current_lat, current_lng),
-		position: theMap.getCenter(),
+        draggable: true,
+        position: new google.maps.LatLng(current_lat, current_lng),		
         visible: true,
         icon: image,
         title:'Title' // Title
     });
-	google.maps.event.addListener(theMap, 'center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      theMap.panTo(marker.getPosition());
-    }, 3000);
-  });
+		google.maps.event.addListener(theMap, 'drag', function() {
+		console.log(marker.getPosition());
+	   
+	  });
 
     var myOptions = {
         content: ""
