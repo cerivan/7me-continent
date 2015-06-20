@@ -122,10 +122,18 @@ function onSuccess(position) {
         icon: image,
         title:'Title' // Title
     });
-		google.maps.event.addListener(theMap, 'drag', function() {
-		console.log(marker.getPosition());
+		google.maps.event.addListener(marker, 'click', toggleBounce);
+		console.log("pos1" + marker.getPosition());
 	   
-	  });
+	  function toggleBounce() {
+		  if (marker.getAnimation() != null) {
+			marker.setAnimation(null);
+			console.log("pos2" + marker.getPosition());
+		  } else {
+			marker.setAnimation(google.maps.Animation.BOUNCE);
+			console.log("pos3" + marker.getPosition());
+		  }
+		}
 
     var myOptions = {
         content: ""
