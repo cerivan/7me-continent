@@ -118,22 +118,14 @@ function onSuccess(position) {
         draggable: true,
         //position: new google.maps.LatLng(current_lat, current_lng),
 		position: theMap.getCenter(),
-		animation: google.maps.Animation.DROP,
         visible: true,
         icon: image,
         title:'Title' // Title
     });
-		google.maps.event.addListener(marker, "dragend", function (e) {
-                    var lat, lng, address;
-                    geocoder.geocode({ 'latLng': marker.getPosition() }, function (results, status) {
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            lat = marker.getPosition().lat();
-                            lng = marker.getPosition().lng();
-                            address = results[0].formatted_address;
-                            alert("Latitude: " + lat + "\nLongitude: " + lng + "\nAddress: " + address);
-                        }
-                    });
-                });
+		google.maps.event.addListener(theMap, 'dragend', function() {
+		console.log(marker.getPosition());
+	   
+	  });
 
     var myOptions = {
         content: ""
