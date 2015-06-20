@@ -118,6 +118,7 @@ function onSuccess(position) {
         draggable: true,
         //position: new google.maps.LatLng(current_lat, current_lng),
 		position: theMap.getCenter(),
+		animation: google.maps.Animation.DROP,
         visible: true,
         icon: image,
         title:'Title' // Title
