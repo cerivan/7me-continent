@@ -123,18 +123,17 @@ function onSuccess(position) {
         icon: image,
         title:'Title' // Title
     });
-		google.maps.event.addListener(marker, 'click', toggleBounce);
-		console.log("pos1" + marker.getPosition());
-	   
-	  function toggleBounce() {
-		  if (marker.getAnimation() != null) {
-			marker.setAnimation(null);
-			console.log("pos2" + marker.getPosition());
-		  } else {
-			marker.setAnimation(google.maps.Animation.BOUNCE);
-			console.log("pos3" + marker.getPosition());
-		  }
-		}
+		google.maps.event.addListener(marker, "dragend", function (e) {
+                    var lat, lng, address;
+                    geocoder.geocode({ 'latLng': marker.getPosition() }, function (results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            lat = marker.getPosition().lat();
+                            lng = marker.getPosition().lng();
+                            address = results[0].formatted_address;
+                            alert("Latitude: " + lat + "\nLongitude: " + lng + "\nAddress: " + address);
+                        }
+                    });
+                });
 
     var myOptions = {
         content: ""
