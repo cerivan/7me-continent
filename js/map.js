@@ -122,7 +122,7 @@ function onSuccess(position) {
         icon: image,
         title:'Title' // Title
     });
-		google.maps.event.addListener(theMap, 'dragend', function() {
+		google.maps.event.addListener(theMap, 'drag', function() {
 		console.log(marker.getPosition());
 	   
 	  });
