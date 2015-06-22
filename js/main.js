@@ -29,16 +29,18 @@
     
 	//enregistrement de la photo dans la session
     function storePhoto(imageData) {
-		sessionStorage.setItem("image",imageData);
+		sessionStorage.setItem("imageData",imageData);
+		
+		console.log("image >> ", imageData);
 		
 		//renvoi vers soumettre
-		window.location.href("soumettre.html");
+		document.location.href("soumettre.html");
     }
  
 	//envoi de la photo en JSON
     function uploadPhoto() {
     
-    	imageData = sessionStorage.getItem("image");
+    	imageData = sessionStorage.getItem("imageData");
     
         var options = new FileUploadOptions();
 		options.headers = {
