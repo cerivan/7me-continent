@@ -52,6 +52,8 @@
  	    var url="http://7eco.cerivan.com/app/post.php";
         var ft = new FileTransfer();
         ft.upload(imageData, url, win, fail, options,true);
+		
+		sessionStorage.setItem("image",imageData)
 		   	
     }
  
