@@ -43,7 +43,7 @@ $(document).ready(function() {
 	    uploadPhoto();
 	    
 	    //renvoi sur recapitulatif.html
-
+		window.open("recapitulatif.html",'_self');
 		
 	});
 
