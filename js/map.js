@@ -115,7 +115,7 @@ function onSuccess(position) {
     theMap.setOptions({styles:styles});
     var marker = new google.maps.Marker({
         map: theMap,
-        draggable: false,
+        draggable: true,
         //position: new google.maps.LatLng(current_lat, current_lng),
 		position: theMap.getCenter(),
         visible: true,
