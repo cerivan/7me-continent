@@ -40,6 +40,7 @@ $(document).ready(function() {
 	    $(".container").slideUp();
 	    //envoi de toutes les informations en JSON
 	    $(".btn-action-soumettre .titre").html("Envoi de la zone<br>en cours...");
+	    uploadPhoto();
 	    
 	    //renvoi sur recapitulatif.html
 

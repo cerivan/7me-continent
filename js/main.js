@@ -32,7 +32,7 @@
 		sessionStorage.setItem("image",imageData);
 		
 		//renvoi vers soumettre
-		window.location.replace("soumettre.html");
+		window.location.href("soumettre.html");
     }
  
 	//envoi de la photo en JSON
