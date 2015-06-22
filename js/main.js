@@ -16,8 +16,8 @@
     
 	function getImage() {
 		// Retrieve image file location from specified source
-        navigator.camera.getPicture(uploadPhoto, function(message) {
-				alert('get picture failed');
+        navigator.camera.getPicture(storePhoto, function(message) {
+				//alert('get picture failed');
 			},{
 				quality: 50, 
 				destinationType: Camera.DestinationType.FILE_URI,
@@ -26,8 +26,19 @@
         );
  
     }
+    
+	//enregistrement de la photo dans la session
+    function storePhoto(imageData) {
+		sessionStorage.setItem("image",imageData);
+		
+		//renvoi vers soumettre
+		window.location.replace("soumettre.html");
+    }
  
-    function uploadPhoto(imageData) {
+	//envoi de la photo en JSON
+    function uploadPhoto() {
+    
+    	imageData = sessionStorage.getItem("image");
     
         var options = new FileUploadOptions();
 		options.headers = {
@@ -41,8 +52,12 @@
 
         var params = new Object();
         
-		params.value1 = "test";
-		params.value2 = "param";
+        params.lat 		= sessionStorage.getItem("lat");
+        params.lng 		= sessionStorage.getItem("lng");
+		params.ampleur  = sessionStorage.getItem("ampleur");
+		params.impact   = sessionStorage.getItem("impact");
+
+
         options.params = params;
 		options.chunkedMode = false;
         //alert('transferring...');
@@ -53,7 +68,6 @@
         var ft = new FileTransfer();
         ft.upload(imageData, url, win, fail, options,true);
 		
-		sessionStorage.setItem("image",imageData)
 		   	
     }
  

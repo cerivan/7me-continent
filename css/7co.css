@@ -222,12 +222,54 @@ body {
 	color:#000;
 }
 .btn-action-soumettre{ 
-	background: url("../images/btn_action-soumettre.png") no-repeat top left / 80px 80px #50d9bf;
-	color:#000;
+	background: url("../images/btn_action-soumettre.png") no-repeat top left / 80px 80px #8FDFCF;
+	color:rgba(255,255,255, 0.3);
 	padding-left:90px;
 	min-height:80px;
   	text-align:left;
+  	
+  	
+	/* Fonctionne déjà sur webkit */
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	
+	/* Bientôt supporté par Firefox */
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	
+	/* … et lorsque ce sera standardisé */
+	transition-property: background-color;
+	transition-duration: 1s;
+
+
+	/* Fonctionne déjà sur webkit */
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 1s;
+	
+	/* Bientôt supporté par Firefox */
+	-moz-transition-property: color;
+	-moz-transition-duration: 1s;
+	
+	/* … et lorsque ce sera standardisé */
+	transition-property: color;
+	transition-duration: 1s;
+
 }
+
+.btn-action-soumettre.ok {
+	color:#000;
+	background-color:#50d9bf;
+}
+
+.btn-action-soumettre.encours {
+	padding-left:0;
+	text-align: center;
+	background-color: #F92F55;
+	background-image:none;
+	color:white;
+	
+}
+
 .btn-liste-map:hover{ 
 	background-color: #8bdfcf;
 	color:#000;
@@ -239,10 +281,7 @@ body {
 	min-height:70px;
   	text-align:left;
 }
-.btn-action-soumettre:hover{ 
-	background-color: #8bdfcf;
-	color:#000;
-}
+
 a.btn-action:hover{
 	text-decoration:none;
 }
@@ -261,9 +300,10 @@ a.btn-action:hover{
 	font-family: 'AvenirLTStdHeavy', Arial, sans-serif;
 }
 .btn-action-soumettre p.titre{ 
-	padding:25px 15px 0 15px;
+	padding:20px 15px 0 15px;
 	margin:0;
 	font-size:1.5em;
+	line-height: 1.1em;
 	text-transform:uppercase;
 	font-family: 'AvenirLTStdHeavy', Arial, sans-serif;
 }
@@ -306,13 +346,13 @@ a.btn-action:hover{
 .action-vote span#vote2{
 	background-position: -520px 0px;
 }
-.action-vote span#vote0:hover{
+.action-vote span#vote0:hover, .action-vote span#vote0.selected{
 	background-position: -91px -125px;
 }
-.action-vote span#vote1:hover{
+.action-vote span#vote1:hover, .action-vote span#vote1.selected{
 	background-position: -311px -125px;
 }
-.action-vote span#vote2:hover{
+.action-vote span#vote2:hover, .action-vote span#vote2.selected{
 	background-position: -521px -125px;
 }
 .action-note{
@@ -329,25 +369,25 @@ a.btn-action:hover{
 .action-note span#note0{
 	background-position: -55px 9px;
 }
-.action-note span#note0:hover{
+.action-note span#note0:hover, .action-note span#note0.selected {
 	background-position: -56px -79px;
 }
 .action-note span#note1{
 	background-position: -230px 9px;
 }
-.action-note span#note1:hover{
+.action-note span#note1:hover, .action-note span#note1.selected {
 	background-position: -231px -79px;
 }
 .action-note span#note2{
 	background-position: -400px 9px;
 }
-.action-note span#note2:hover{
+.action-note span#note2:hover, .action-note span#note2.selected {
 	background-position: -401px -79px;
 }
 .action-note span#note3{
 	background-position: -566px 0px;
 }
-.action-note span#note3:hover{
+.action-note span#note3:hover, .action-note span#note3.selected {
 	background-position: -567px -88px;
 }
 .separateur{

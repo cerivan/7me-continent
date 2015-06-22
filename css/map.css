@@ -80,3 +80,40 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+
+#map_marker_fixed {
+	background-image: url('../images/gmaps-marker.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width:10vw;
+	height:10vh;
+	position: absolute;
+	margin-left:45vw;
+	margin-top:40vh;
+	z-index:30;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

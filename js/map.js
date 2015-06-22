@@ -113,7 +113,9 @@ function onSuccess(position) {
     var theMap = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);
     var image = "images/gmaps-marker.png"
     theMap.setOptions({styles:styles});
-    var marker = new google.maps.Marker({
+
+/*
+	    var marker = new google.maps.Marker({
         map: theMap,
         draggable: true,
         //position: new google.maps.LatLng(current_lat, current_lng),
@@ -126,6 +128,7 @@ function onSuccess(position) {
 			console.log(marker.getPosition());
 	   
 		});
+*/
 
 
     var myOptions = {
@@ -156,6 +159,26 @@ function onSuccess(position) {
     google.maps.event.addListener(marker, "click", function (e) {
         infowindow.open(theMap,marker);
     });*/
+    
+    
+    //gestion de la page
+    //clic sur le bouton d'action
+    $(".btn-action").on("click", function () {
+	    //récupération de la géolocalisation
+	    mapCenter = theMap.getCenter();
+	    console.log(mapCenter, mapCenter.lat(), mapCenter.lng());
+	    
+	    //enregistrement en session
+	    sessionStorage.setItem("lat", mapCenter.lat());
+	    sessionStorage.setItem("lng", mapCenter.lng());
+
+ 		getImage();
+   });
+    
+    
+    
+    
+    
 }
 
 function onError(error)

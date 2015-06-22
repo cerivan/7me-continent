@@ -1,9 +1,54 @@
+
+//vérification du remplissage de l'impact et de l'ampleur de la zone
+//retour true si les champs sont remplis, false sinon
+function getSubmit() {
+	if ($(".action-vote span.selected").length > 0 && $(".action-note span.selected").length > 0) {
+		$(".btn-action-soumettre").addClass("ok");
+		return true;
+	} else {
+		return false;
+	}
+
+
+}
+
 $(document).ready(function() {		
 	
-	
-	$( ".btn-action-photo-click" ).click(function(){
-		getImage();
+	$(".action-vote span").on("click", function () {
+		$(".action-vote span").removeClass("selected");
+		$(this).addClass("selected");
+		getSubmit();
 	});
+
+	$(".action-note span").on("click", function () {
+		$(".action-note span").removeClass("selected");
+		$(this).addClass("selected");
+		getSubmit();
+	});
+	
+	$(".btn-action-soumettre").on("click", function () {
+		if (getSubmit() == false) return false;
+		
+		$(".btn-action-soumettre").addClass("encours");
+
+		
+		//enregistrement en session
+	    sessionStorage.setItem("impact", $(".action-vote span.selected").attr("id"));
+	    sessionStorage.setItem("ampleur", $(".action-note span.selected").attr("id"));
+	    
+	    $(".navbar").slideUp("fast");
+	    $(".container").slideUp();
+	    //envoi de toutes les informations en JSON
+	    $(".btn-action-soumettre .titre").html("Envoi de la zone<br>en cours...");
+	    
+	    //renvoi sur recapitulatif.html
+
+		
+	});
+
+
+
+
 	$( ".btn-fbk" ).click(function(){
 		
 		//faceBook
