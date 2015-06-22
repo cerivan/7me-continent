@@ -116,11 +116,17 @@ function onSuccess(position) {
     var marker = new google.maps.Marker({
         map: theMap,
         draggable: false,
-        position: new google.maps.LatLng(current_lat, current_lng),
+        //position: new google.maps.LatLng(current_lat, current_lng),
+		position: theMap.getCenter(),
         visible: true,
         icon: image,
         title:'Title' // Title
     });
+		google.maps.event.addListener(theMap, 'drag', function() {
+			console.log(marker.getPosition());
+	   
+		});
+
 
     var myOptions = {
         content: ""
