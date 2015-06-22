@@ -10,7 +10,7 @@
     function onDeviceReadyCamera() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
-				
+		
     }    
        
     
@@ -30,7 +30,7 @@
 	//enregistrement de la photo dans la session
     function storePhoto(imageData) {
 		sessionStorage.setItem("imageData",imageData);
-		
+		sessionStorage.setItem("uuid",device.uuid);		
 		console.log("image >> ", imageData);
 		
 		//renvoi vers soumettre
@@ -57,7 +57,7 @@
         
         params.lat 		= sessionStorage.getItem("lat");
         params.lng 		= sessionStorage.getItem("lng");
-		params.impact   = sessionStorage.getItem("uuid");
+		params.uuid  = sessionStorage.getItem("uuid");
 		params.ampleur  = sessionStorage.getItem("ampleur");
 		params.impact   = sessionStorage.getItem("impact");
 		

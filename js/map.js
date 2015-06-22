@@ -171,7 +171,7 @@ function onSuccess(position) {
 	    //enregistrement en session
 	    sessionStorage.setItem("lat", mapCenter.lat());
 	    sessionStorage.setItem("lng", mapCenter.lng());
-		sessionStorage.setItem("uuid",device.uuid);
+		
 
  		getImage();
    });
