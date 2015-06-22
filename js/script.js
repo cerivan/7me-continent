@@ -14,7 +14,6 @@ $(document).ready(function() {
 			}, function(err) {
 				alert("Could not get access token: " + err);
 			});
-			postJson(JSON.stringify(userData));
 		}
 
 		facebookConnectPlugin.login(["public_profile"],
@@ -41,21 +40,4 @@ function slide() {
     window.plugins.nativepagetransitions.slide({
         "href" : "accueil.html"
     });
-}
-function postJson(jsonTosend){
-	urlToSend = "http://7eco.cerivan.com/app/post.php";
-	  $.ajax({
-            url: urlToSend,
-			data : jsonTosend,
-			dataType : "json",
-            timeout: 3000,
-            success: function(data) {
-              alert(data); },
-            error: function() {
-              alert('La requête n\'a pas abouti'); }
-        }); 
-	
-	
-	
-	
 }
