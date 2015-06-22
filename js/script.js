@@ -1,7 +1,7 @@
 $(document).ready(function() {		
 	
 	
-	$( ".btn-action-photo" ).click(function(){
+	$( ".btn-action-photo-click" ).click(function(){
 		getImage();
 	});
 	$( ".btn-fbk" ).click(function(){
