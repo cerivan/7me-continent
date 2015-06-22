@@ -30,7 +30,7 @@
 	//enregistrement de la photo dans la session
     function storePhoto(imageData) {
 		sessionStorage.setItem("imageData",imageData);
-		
+		sessionStorage.setItem("uuid",device.uuid);
 		console.log("image >> ", imageData);
 		
 		//renvoi vers soumettre
@@ -59,6 +59,7 @@
         params.lng 		= sessionStorage.getItem("lng");
 		params.ampleur  = sessionStorage.getItem("ampleur");
 		params.impact   = sessionStorage.getItem("impact");
+		params.impact   = sessionStorage.getItem("uuid");
 
 
         options.params = params;
