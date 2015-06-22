@@ -34,7 +34,8 @@
 		console.log("image >> ", imageData);
 		
 		//renvoi vers soumettre
-		document.location.href("soumettre.html");
+		//document.location.href("soumettre.html");
+		window.open("soumettre.html",'_self');
     }
  
 	//envoi de la photo en JSON
