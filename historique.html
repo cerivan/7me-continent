@@ -20,7 +20,7 @@
     </head>
 	<script>
 		
-			$.getJSON( "http://7eco.cerivan.com/app/json.php?uuid="+device.uuid, function( data ) {
+			$.getJSON( "http://7eco.cerivan.com/app/json.php?uuid="+sessionStorage.getItem("uuid"), function( data ) {
 			  var items = [];
 			  $.each( data, function( key, val ) {
 				var amp = (val.ampleur==2)? "moyenne":((val.ampleur==3)?"grande":"faible");
