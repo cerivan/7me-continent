@@ -111,7 +111,7 @@ function onSuccess(position) {
         ,mapTypeId: google.maps.MapTypeId.NORMAL
     };
     var theMap = new google.maps.Map(document.getElementById("map-recap"), myMapOptions);
-    var image = "images/gmaps-marker.png"
+    var image = "images/gmaps-marker-mobile.png"
     theMap.setOptions({styles:styles});
 
 
