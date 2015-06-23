@@ -420,3 +420,9 @@ a.btn-action:hover{
   background: url("../images/picto-twitter.png") no-repeat 20px 20px;
   text-align:left;
 }
+.gmnoprint,.gm-style-cc{
+	display:none;
+}
+.container.recap{
+	margin-top:180px;
+}
