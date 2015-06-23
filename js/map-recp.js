@@ -106,9 +106,10 @@ function onSuccess(position) {
 
 
     var myMapOptions = {
-        zoom: 16
-        ,center: secheltLoc
-        ,mapTypeId: google.maps.MapTypeId.NORMAL
+        zoom: 16,
+        center: secheltLoc,
+		draggable: false,
+        mapTypeId: google.maps.MapTypeId.NORMAL
     };
     var theMap = new google.maps.Map(document.getElementById("map-recap"), myMapOptions);
     var image = "images/gmaps-marker-mobile.png"

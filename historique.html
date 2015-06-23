@@ -20,11 +20,11 @@
     </head>
 	<script>
 		
-			$.getJSON( "http://7eco.cerivan.com/app/json.php", function( data ) {
+			$.getJSON( "http://7eco.cerivan.com/app/json.php?uuid="+device.uuid, function( data ) {
 			  var items = [];
 			  $.each( data, function( key, val ) {
 				var amp = (val.ampleur==2)? "moyenne":((val.ampleur==3)?"grande":"faible");
-				items.push( '<div class="s-liste-photo"><img src="http://7eco.cerivan.com/uploaded/' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><br/><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">Paris<\/p><p class="stitre">Créée le ' + val.date + '<\/p><\/div><\/a><\/div>' );
+				items.push( '<div class="s-liste-photo"><img src="http://7eco.cerivan.com/uploaded/' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><br/><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">'+val.city+'<\/p><p class="stitre">Créée le ' + val.date + '<\/p><\/div><\/a><\/div>' );
 			  });
 			 
 			  $( "<div/>", {
