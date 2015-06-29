@@ -286,7 +286,7 @@ a.btn-action:hover{
 	text-decoration:none;
 }
 .btn-action-photo p.titre{ 
-	padding:15px 15px 0 15px;
+	padding:20px 15px 0 15px;
 	margin:0;
 	font-size:1.1em;
 	text-transform:uppercase;
@@ -426,3 +426,36 @@ a.btn-action:hover{
 .container.recap{
 	margin-top:180px;
 }
+
+
+#preloader {
+	background-color:rgba(9,51,73, 0.9);
+	z-index:100;
+	height:100vh;
+	width:100vw;
+	position:absolute;
+	top:0;
+	left:0;
+	color:white;
+	font-size:1.5rem;
+	text-align: center;
+	background-image: url('../images/loader.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#loading_text {
+	padding-top: 40vh;
+}
+
+#preload_description {
+	
+}
+
+.nohisto {
+	padding:20px;
+}
+
+
+
+

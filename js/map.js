@@ -177,7 +177,7 @@ function onSuccess(position) {
    });
     
     
-    
+    $("#preloader").slideUp(880);
     
     
 }

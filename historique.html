@@ -21,6 +21,16 @@
 	<script>
 		
 			$.getJSON( "http://7eco.cerivan.com/app/json.php?uuid="+sessionStorage.getItem("uuid"), function( data ) {
+				console.log(data, data.length);
+				
+				//si pas de résultats
+				if (data.noresult == true) {
+					$("<p class='nohisto'>Vous n'avez pas déclaré de zone pour le moment.</p>").appendTo("body");
+					$("#preloader").slideUp(880);
+					return false;
+				}
+				
+				
 			  var items = [];
 			  $.each( data, function( key, val ) {
 				var amp = (val.ampleur==2)? "moyenne":((val.ampleur==3)?"grande":"faible");
@@ -31,11 +41,18 @@
 				"class": "s-liste clearfix",
 				html: items.join( "" )
 			  }).appendTo( "body" );
+			  
+			      $("#preloader").slideUp(880);
+
 			});
 			
 	</script>
 
     <body>
+	<div id="preloader">
+		<div id="loading_text">CHARGEMENT</div>
+		<div id="preload_description"></div>
+	</div>
 
     		<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="AppCtrl">
 			<div class="container">
@@ -46,12 +63,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="accueil.html"">ACCUEIL</a>
+					<a class="navbar-brand" href="accueil.html">ACCUEIL</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li>&nbsp;7<sup>E</sup> CONTINENT</li>
-						<li><a href="soumettre.html">INDIQUER UNE ZONE POLLUEE</a></li>
+						<li><a href="map.html">INDIQUER UNE ZONE POLLUEE</a></li>
 						<li><a href="accueil.html">ACCUEIL</a></li>
 						<li><a href="map.html">CARTE</a></li>
 						<li><a href="historique.html">MON HISTORIQUE</a></li>

@@ -21,6 +21,10 @@
 	<script src="js/main.js"></script>	
 </head>
 <body>
+	<div id="preloader">
+		<div id="loading_text">Géolocalisation en cours</div>
+		<div id="preload_description"></div>
+	</div>
 	<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="AppCtrl">
 		<div class="container">
 			<div class="navbar-header">
@@ -35,7 +39,7 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li>&nbsp;7<sup>E</sup> CONTINENT</li>
-					<li><a href="soumettre.html">INDIQUER UNE ZONE POLLUEE</a></li>
+					<li><a href="map.html">INDIQUER UNE ZONE POLLUEE</a></li>
 					<li><a href="accueil.html">ACCUEIL</a></li>
 					<li><a href="map.html">CARTE</a></li>
 					<li><a href="historique.html">MON HISTORIQUE</a></li>
@@ -49,9 +53,9 @@
     </script>
     <div id="map_marker_fixed"></div>
     <div id="map_canvas"  style="width:100%;height:100%; position:relative;"></div>
-	<br></br>
+	
 	 <a class="btn-action" >
-          <div class="btn-action-photo btn-action-photo-click"  style="position:relative;margin-top: -100px;">
+          <div class="btn-action-photo btn-action-photo-click"  style="position:relative;margin-top: -80px;">
             <p class="titre">Indiquez une zone polluée</p>
             <p class="stitre">Prenez les déchets en photo</p>
         </div>
