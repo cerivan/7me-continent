@@ -19,8 +19,9 @@
 	<script src="js/script.js"></script>
     </head>
 	<script>
-		
-			$.getJSON( "http://7eco.cerivan.com/app/json.php?uuid="+sessionStorage.getItem("uuid"), function( data ) {
+			myJson = "http://7eco.cerivan.com/app/json.php?uuid="+sessionStorage.getItem("uuid");
+			console.log(myJson);
+			$.getJSON( myJson, function( data ) {
 				console.log(data, data.length);
 				
 				//si pas de résultats
@@ -34,7 +35,7 @@
 			  var items = [];
 			  $.each( data, function( key, val ) {
 				var amp = (val.ampleur==2)? "moyenne":((val.ampleur==3)?"grande":"faible");
-				items.push( '<div class="s-liste-photo"><img src="http://7eco.cerivan.com/uploaded/' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><br/><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">'+val.city+'<\/p><p class="stitre">Créée le ' + val.date + '<\/p><\/div><\/a><\/div>' );
+				items.push( '<div class="s-liste-photo"><img src="' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><br/><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">'+val.city+'<\/p><p class="stitre">Créée le ' + val.date + '<\/p><\/div><\/a><\/div>' );
 			  });
 			 
 			  $( "<div/>", {

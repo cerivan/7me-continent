@@ -57,7 +57,7 @@
           <p>Elle est envoyée vers l'association la plus proche</p>
         </div>
         <div class="col-xs-12 text-center">
-          <input type="text" value="15" data-readOnly="true" data-fgColor="#44475e" data-inputColor="#545354" data-thickness=".1" data-bgColor="#ffcd00" data-font="AvenirLTStdLight" class="dial">
+          <input type="text" value="15" data-readOnly="true" data-fgColor="#44475e" data-inputColor="#545354" data-thickness=".1" data-bgColor="#ffcd00" data-font="AvenirLTStdLight" class="dial" id="nbu">
         </div>
         <div class="col-xs-12 text-center">
           <p>Contributeurs ont signalé la zone</p>
@@ -74,8 +74,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.knob.min.js"></script>
     <script>
+	    
     $(function() {
-      $(".dial").knob();
+	    nbu = sessionStorage.getItem("nb_users");
+	    if (isNaN(nbu) || nbu == null) nbu = 1; 
+	    console.log("nbu", nbu);
+    	$("#nbu").val(nbu);
+    	$("#nbu").knob();
     });
     </script>
   </body>

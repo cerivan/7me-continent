@@ -3,6 +3,9 @@
  */
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+var theMap = false;
+var markers = [];
+
 function onSuccess(position) {
     var current_lat = position.coords.latitude;
     var current_lng = position.coords.longitude;
@@ -106,11 +109,13 @@ function onSuccess(position) {
 
 
     var myMapOptions = {
-        zoom: 16
-        ,center: secheltLoc
-        ,mapTypeId: google.maps.MapTypeId.NORMAL
+        zoom: 16,
+        minZoom: 15,
+        maxZoom: 17,
+        center: secheltLoc,
+        mapTypeId: google.maps.MapTypeId.NORMAL
     };
-    var theMap = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);
+    theMap = new google.maps.Map(document.getElementById("map_canvas"), myMapOptions);
     var image = "images/gmaps-marker.png"
     theMap.setOptions({styles:styles});
 
@@ -176,11 +181,74 @@ function onSuccess(position) {
  		getImage();
    });
     
+    setMarkers();
+    google.maps.event.addListener(theMap, 'dragend', function() { setMarkers(); } );
     
     $("#preloader").slideUp(880);
     
     
 }
+
+function setAllMap(map) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map);
+  }
+}
+
+// Add a marker to the map and push to the array.
+function addMarker(lat, lng) {
+    var image = "images/zone.png";
+    console.log(location);
+  var marker = new google.maps.Marker({
+    draggable: false,
+    position: new google.maps.LatLng(lat, lng),
+	//position: theMap.getCenter(),
+    visible: true,
+    icon: image,
+    map: theMap
+  });
+  markers.push(marker);
+}
+
+function clearMarkers() {
+  setAllMap(null);
+}
+
+function deleteMarkers() {
+  clearMarkers();
+  markers = [];
+}
+function setMarkers() {
+	
+	console.log(theMap.getCenter());
+	myJson = "http://7eco.cerivan.com/app/listZones.php?bounds="+theMap.getCenter();
+	console.log(myJson);
+	$.getJSON( myJson, function( data ) {
+		console.log(data, data.length);
+	    sessionStorage.setItem("nb_users", data.length);
+
+		
+		//si pas de résultats
+		if (data.noresult == true) {
+			return false;
+		}
+		
+		deleteMarkers();
+		
+		
+		
+		$.each( data, function( key, val ) {
+			console.log(val);
+			addMarker(val.lat, val.lng);
+		});
+
+	});
+
+
+
+
+}
+
 
 function onError(error)
 {
