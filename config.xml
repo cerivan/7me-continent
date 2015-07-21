@@ -70,17 +70,18 @@
 	<gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
 	
     <!-- Define app icon for each platform. -->
-	<!-- <icon src="img/icon.png" width="48" height="48"/>
+	<icon src="img/icon_48x48.png" width="48" height="48"/>
 	<icon src="img/icon-57.png"         gap:platform="ios"        width="57" height="57" />
 	<icon src="img/icon-72.png"         gap:platform="ios"        width="72" height="72" />
-    <icon src="img/icon-76.png"         gap:platform="ios"        width="76" height="76" />
-    <icon src="img/icon-120.png"         gap:platform="ios"        width="120" height="120" />
-    <icon src="img/icon-152.png"         gap:platform="ios"        width="152" height="152" /> -->
+    <icon src="img/icon.png"         gap:platform="ios"        width="76" height="76" />
+    <icon src="img/icon@2x.png"         gap:platform="ios"        width="120" height="120" />
+    <icon src="img/icon_ipad@2x.png"         gap:platform="ios"        width="152" height="152" />
+	 <icon src="img/icon@3x.png"         gap:platform="ios"        width="180" height="180" />
 	
 	<!-- Define app splash screen for each platform. -->
 		 
-    <!-- <gap:splash src="img/splash-568h.png" 	gap:platform="ios"     width="640" height="1136" />
-	<gap:splash src="img/splash.jpg" /> -->
+    <gap:splash src="img/header_640x1136px.png" 	gap:platform="ios"     width="640" height="1136" />
+	<gap:splash src="img/header_640x1136px.jpg" />
     
 
 </widget>
