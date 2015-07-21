@@ -20,7 +20,7 @@
         navigator.camera.getPicture(storePhoto, function(message) {
 				//alert('get picture failed');
 			},{
-				quality: 50, 
+				quality: 30, 
 				destinationType: Camera.DestinationType.FILE_URI,
 				sourceType: Camera.PictureSourceType.CAMERA
 			}
@@ -56,16 +56,16 @@
 
         var params = new Object();
         
-        params.lat 		= sessionStorage.getItem("lat");
-        params.lng 		= sessionStorage.getItem("lng");
-		params.uuid  = sessionStorage.getItem("uuid");
-		params.ampleur  = sessionStorage.getItem("ampleur");
-		params.impact   = sessionStorage.getItem("impact");
+        params.lat 		 = sessionStorage.getItem("lat");
+        params.lng 		 = sessionStorage.getItem("lng");
+		params.uuid      = sessionStorage.getItem("uuid");
+		params.ampleur   = sessionStorage.getItem("ampleur");
+		params.impact    = sessionStorage.getItem("impact");
 		
 
 
         options.params = params;
-		options.chunkedMode = false;
+		options.chunkedMode  = false;
         //alert('transferring...');
 		
 		//console.log(options);

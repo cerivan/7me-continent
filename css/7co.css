@@ -56,14 +56,15 @@ body {
 	margin-top:0;
 	padding-top:20px;
 }.bg-world-log{
-	 background: url("../images/background-2.png") no-repeat top left;
+	 background: url("../images/background.png") no-repeat top left;
 	 background-size:cover;
 	 padding:20px 0 0 0 ;
 	 font-family: 'AvenirLTStdMedium', Arial, sans-serif;
  }
 .bg-world{
 	background: url("../images/background.png") no-repeat left -80px;
-	background-size:cover;
+	background-size:100%;
+	background-position:center top;
 	padding:20px 0 0 0 ;
 	font-family: 'AvenirLTStdMedium', Arial, sans-serif;
 }
@@ -117,6 +118,7 @@ body {
 	font-size:1.1em;
 }
 .s-liste .s-liste-photo{
+	clear:both;
 	float:left;
 	width:30%;
 	/*height:210px;*/
@@ -133,19 +135,22 @@ body {
 	display:block;
 }
 .s-liste .s-liste-photo img{
-	height:100%;
-	width:100%;
+	height:40vw;
+	width:40vw;
+	max-width: none !important;
 }
 .s-liste .btn-liste-map {
 	max-width:320px
 }
 .s-liste .s-liste-text{
-	margin-left:20px;
-	width:60%;
-	padding:20px 10px;
+	height:40vw;
+	margin-left:45vw;
+	width:50vw;
+	padding:10px 0 0 0;
 	text-transform: uppercase;
 	font-size:1.3em;
-	float:left;
+	loat:left;
+	border-bottom:1px solid #CCC;
 }
 .zone-photo{
 	position:relative;
@@ -155,8 +160,9 @@ body {
 }
 .photo-layer{
 	width:100%;
-	height:100%;
-	position:absolute;
+	height:20vh;
+	overflow: hidden;
+	osition:absolute;
 	z-index:5;
 	background:url("../images/photo-layer.png") no-repeat;
 	background-position: center center;
@@ -164,6 +170,13 @@ body {
 	top:0;
 	left:0;
 }
+.photo-layer img {
+	isplay:none;
+	width:100%;
+	opacity:0.4;
+}
+
+
 .btn-fbk{ 
 	background: url("../images/btn_facebook.png") no-repeat top left / 45px 100% #284ea1;
 	color:#fff;
@@ -275,10 +288,11 @@ body {
 	color:#000;
 }
 .btn-liste-map{ 
-	background: url("../images/btn_action-map.png") no-repeat top left / 70px 100% #50d9bf;
+	background-color: #50d9bf;
+	bbackground: url("../images/btn_action-map.png") no-repeat top left / 70px 100% #50d9bf;
 	color:#000;
-	padding-left:80px;
-	min-height:70px;
+	padding:10px;
+	mmin-height:70px;
   	text-align:left;
 }
 
@@ -293,7 +307,7 @@ a.btn-action:hover{
 	font-family: 'AvenirLTStdHeavy', Arial, sans-serif;
 }
 .btn-liste-map p.titre{ 
-	padding:10px 5px 0 0;
+	ppadding:10px 5px 0 0;
 	margin:0;
 	font-size:1.0em;
 	text-transform:uppercase;
@@ -313,7 +327,7 @@ a.btn-action:hover{
 	font-size:0.9em;
 }
 .btn-liste-map p.stitre{ 
-	padding:0 5px 0 0;
+	ppadding:0 5px 0 0;
 	margin:0;
 	font-size:0.8em;
 	text-transform: none;

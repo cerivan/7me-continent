@@ -35,7 +35,7 @@
 			  var items = [];
 			  $.each( data, function( key, val ) {
 				var amp = (val.ampleur==2)? "moyenne":((val.ampleur==3)?"grande":"faible");
-				items.push( '<div class="s-liste-photo"><img src="' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><br/><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">'+val.city+'<\/p><p class="stitre">Créée le ' + val.date + '<\/p><\/div><\/a><\/div>' );
+				items.push( '<div class="s-liste-photo"><img src="' + val.photo + '" class="img-responsive"/><\/div><div class="s-liste-text"><p>Déchets d\'ampleur ' + amp + '<\/p><a class="btn-action" href="#"><div class="btn-liste-map"><p class="titre">'+val.city+'<\/p><p class="stitre">le ' + val.date + '<\/p><\/div><\/a><\/div>' );
 			  });
 			 
 			  $( "<div/>", {

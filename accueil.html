@@ -64,11 +64,11 @@
         <div class="row">
             <div class="infos text-center">
                 <div class="col-xs-6">
-                    2,4 <sub>k</sub><br/><span>utilisateurs</span><br/>
+                    <b id="nb_users">-</b> <sub></sub><br/><span>utilisateurs</span><br/>
                     <img src="images/picto-users.png" alt=""/>
                 </div>
                 <div class="col-xs-6">
-                    5,3 <sub>k</sub><br/><span>alertes</span><br/>
+                    <b id="nb_alertes">-</b> <sub></sub><br/><span>alertes</span><br/>
                     <img src="images/picto-warnings.png" alt=""/>
                 </div>
             </div>
@@ -113,5 +113,27 @@
 <!-- Placed at the end of the document so the pages load faster -->
 
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+
+	myJson = "http://7eco.cerivan.com/app/getInfos.php";
+	console.log(myJson);
+	$.getJSON( myJson, function( data ) {
+		console.log(data, data.length);
+		
+		//si pas de résultats
+		if (data.noresult == true) {
+			return false;
+		}
+		
+		$("#nb_users").html(data.users);
+		$("#nb_alertes").html(data.alertes);
+
+	});
+	
+	
+</script>
+
+
 </body>
 </html>

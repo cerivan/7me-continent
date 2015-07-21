@@ -61,7 +61,7 @@
 
     <div class="zone-photo text-center">
 
-      <div class="photo-layer"></div>
+      <div class="photo-layer"><img src="images/background.png"></div>
     </div>
     <div class="container">
       <div class="row">
@@ -89,6 +89,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+    
+    <script>
+	    imageData = sessionStorage.getItem("imageData");
+        $(".photo-layer img").attr("src", "data:image/jpeg;base64," + imageData);
+	</script>
 
   </body>
   </html>

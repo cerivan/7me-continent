@@ -1,7 +1,9 @@
 /**
  * Created by okalukembi on 03/06/2015.
  */
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
+$(document).ready(function() {		
+	navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
+});
 
 var theMap = false;
 var markers = [];
@@ -196,8 +198,8 @@ function setAllMap(map) {
 }
 
 // Add a marker to the map and push to the array.
-function addMarker(lat, lng) {
-    var image = "images/zone.png";
+function addMarker(lat, lng, zone) {
+    var image = "images/zone"+zone+".png";
     console.log(location);
   var marker = new google.maps.Marker({
     draggable: false,
@@ -239,7 +241,7 @@ function setMarkers() {
 		
 		$.each( data, function( key, val ) {
 			console.log(val);
-			addMarker(val.lat, val.lng);
+			addMarker(val.lat, val.lng, val.ampleur);
 		});
 
 	});

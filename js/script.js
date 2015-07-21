@@ -1,3 +1,12 @@
+navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
+
+function geoOK(position) {
+	console.log("Récupération géolocalisation OK", position);
+}
+
+function geoNOK() {
+	console.log("no position detected");
+}
 
 //vérification du remplissage de l'impact et de l'ampleur de la zone
 //retour true si les champs sont remplis, false sinon
