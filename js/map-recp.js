@@ -1,7 +1,9 @@
 ﻿/**
  * Created by okalukembi on 03/06/2015.
  */
-//navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
+$(document).ready(function() {		
+	navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
+});
 
 function onSuccess(position) {
     var current_lat = sessionStorage.getItem("lat");
