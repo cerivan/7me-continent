@@ -4,10 +4,10 @@
         id = "com.cerivan.septeco"
         version = "1.0.0">
 	
-	<name>7me-continent</name>
+	<name>septeco</name>
 
 	<description>
-		7me-continent
+		septeco
 	</description>
 
 	<author href="http://www.cerivan.com" email="mail@cerivan.com">
