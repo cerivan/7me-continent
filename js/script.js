@@ -1,4 +1,6 @@
-navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
+$(document).ready(function() {		
+	navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
+});
 
 function geoOK(position) {
 	console.log("Récupération géolocalisation OK", position);
@@ -52,7 +54,7 @@ $(document).ready(function() {
 	    uploadPhoto();
 	    
 	    //renvoi sur recapitulatif.html
-		window.open("recapitulatif.html",'_self');
+		//window.open("recapitulatif.html",'_self');
 		
 	});
 
