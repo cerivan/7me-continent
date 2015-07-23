@@ -82,6 +82,7 @@
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
         //alert(r.response);
+        window.open("recapitulatif.html",'_self');
     }
 
     function fail(error) {
