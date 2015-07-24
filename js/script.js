@@ -1,5 +1,10 @@
-$(document).ready(function() {		
-	navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
+$(document).ready(function() {
+	
+	var deviceAgent = navigator.userAgent.toLowerCase();
+	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+	if (!agentID) {
+		navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
+	}
 });
 
 function geoOK(position) {
