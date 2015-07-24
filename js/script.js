@@ -94,8 +94,8 @@ $(document).ready(function() {
 
 
 
-function slide() {
+/* function slide() {
     window.plugins.nativepagetransitions.slide({
         "href" : "accueil.html"
     });
-}
+} */
