@@ -16,7 +16,7 @@
 	
 	<preference name="permissions" value="none" />
 	<preference name="fullscreen" value="true"/>
-	<access origin="*" subdomains="true" />
+	<access origin="*" />
 	<preference name="load-url-timeout" value="30000" />
 	
 	<!-- to enable individual permissions use the following examples -->	
