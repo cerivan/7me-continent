@@ -50,8 +50,11 @@
 	<feature name="InAppBrowser">
 		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
 	</feature>
-		
+	
 	<!-- IOS	 -->
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>
 	<feature name="File">
 		<param name="ios-package" value="CDVFile" />
 	</feature>
@@ -67,9 +70,6 @@
 	<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="false" />
     </feature>
-	<feature name="InAppBrowser">
-		<param name="ios-package" value="CDVInAppBrowser" />
-	</feature
 	
 	<gap:plugin name="org.apache.cordova.camera"/>
 	<gap:plugin name="org.apache.cordova.file"/>
