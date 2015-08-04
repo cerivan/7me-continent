@@ -470,10 +470,11 @@ a.btn-action:hover{
 	padding:20px;
 }
 .container  .btn.btn-retour{
-		background-color: #ffcd00;
-		color: #000;
-		min-width: 250px; 
-	}
+	background-color: #ffcd00;
+	color: #000;
+	min-width: 250px; 
+	margin-bottom: 20px
+}
 	
 a.retour{
 	display: block;
@@ -487,7 +488,10 @@ a.retour{
 	font-size: 1.4em;
 
 }
-
+.lien-site:hover,
+.lien-site:active{
+	text-decoration: none;
+}
 
 
 
