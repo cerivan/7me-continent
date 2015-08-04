@@ -46,8 +46,11 @@
 	</feature>
 	<feature name="Geolocation">
 		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-	</feature>	
-	
+	</feature>
+	<feature name="InAppBrowser">
+		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+	</feature>
+		
 	<!-- IOS	 -->
 	<feature name="File">
 		<param name="ios-package" value="CDVFile" />
@@ -64,6 +67,9 @@
 	<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="false" />
     </feature>
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature
 	
 	<gap:plugin name="org.apache.cordova.camera"/>
 	<gap:plugin name="org.apache.cordova.file"/>
