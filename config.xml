@@ -15,14 +15,8 @@
 	</author>	 
 	
 	<preference name="permissions" value="none" />
-<<<<<<< HEAD
 	<access origin="*" />
 	<preference name="orientation" value="portrait" />
-=======
-	<preference name="fullscreen" value="true"/>
-	<access origin="*" />
-	<preference name="load-url-timeout" value="30000" />
->>>>>>> origin/master
 	
 	<!-- to enable individual permissions use the following examples -->	
 	<feature name="http://api.phonegap.com/1.0/camera"/>	
