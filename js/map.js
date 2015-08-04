@@ -111,8 +111,8 @@ function onSuccess(position) {
 
 
     var myMapOptions = {
-        zoom: 16,
-        minZoom: 15,
+        zoom: 15,
+        minZoom: 1,
         maxZoom: 17,
         center: secheltLoc,
         mapTypeId: google.maps.MapTypeId.NORMAL

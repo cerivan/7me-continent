@@ -81,7 +81,7 @@ body {
 	font-size:2.3em;
 }
 .starter-template h2{
-	font-size:1.7em;
+	font-size:1.5em;
 }
 .starter-template .lead{
 	font-family: 'AvenirLTStdLight', Arial, sans-serif;
@@ -469,6 +469,57 @@ a.btn-action:hover{
 .nohisto {
 	padding:20px;
 }
+.container  .btn.btn-retour{
+		background-color: #ffcd00;
+		color: #000;
+		min-width: 250px; 
+	}
+	
+a.retour{
+	display: block;
+    clear: both;
+    text-align: center;
+}
+
+.lien-site{
+	background-color: white;
+	padding: 15px 0 0 0;
+	font-size: 1.4em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:370px) {
 	.action-vote span {

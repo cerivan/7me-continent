@@ -28,9 +28,9 @@
 	<feature name="http://api.phonegap.com/1.0/storage"/>
 	<feature name="http://api.phonegap.com/1.0/battery"/>
 	<!-- <feature name="http://api.phonegap.com/1.0/contacts"/>  -->
-	
+	<!-- ANDROID	 -->
 	<feature name="Storage">
-       		<param value="org.apache.cordova.Storage" name="android-package"/>
+       		<param name="android-package" value="org.apache.cordova.Storage"/>
 	</feature>
 	<feature name="Camera">
     		<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
@@ -43,8 +43,12 @@
 	</feature>
 	<feature name="FileTransfer">
    		<param name="android-package" value="org.apache.cordova.FileTransfer" />
+	</feature>
+	<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
 	</feature>	
-		
+	
+	<!-- IOS	 -->
 	<feature name="File">
 		<param name="ios-package" value="CDVFile" />
 	</feature>
@@ -56,11 +60,10 @@
     	</feature>
 	<feature name="Geolocation">
 		<param name="ios-package" value="CDVLocation" />
-	</feature>
-	<feature name="Geolocation">
-		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-	</feature>
-	
+	</feature>	
+	<feature name="StatusBar">
+            <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
 	
 	<gap:plugin name="org.apache.cordova.camera"/>
 	<gap:plugin name="org.apache.cordova.file"/>
@@ -76,6 +79,7 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
+	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 	<!-- <gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" /> -->
 	
     <!-- Define app icon for each platform. -->
