@@ -11,6 +11,16 @@ var markers = [];
 function onSuccess(position) {
     var current_lat = position.coords.latitude;
     var current_lng = position.coords.longitude;
+    
+    if (sessionStorage.getItem("gotolat")>0) {
+	    current_lat = sessionStorage.getItem("gotolat");
+	    current_lng = sessionStorage.getItem("gotolng");
+	    
+	    sessionStorage.setItem("gotolat", 0);
+	    sessionStorage.setItem("gotolng", 0);
+	    
+    }
+    
     var secheltLoc = new google.maps.LatLng(current_lat, current_lng);
     //alert(secheltLoc);
 
@@ -199,12 +209,17 @@ function setAllMap(map) {
 
 // Add a marker to the map and push to the array.
 function addMarker(lat, lng, zone, photo) {
-    var image = "images/zone"+zone+".png";
+    var image = {
+	    	url: "images/zone"+zone+".png",
+	    	anchor: new google.maps.Point(75,75)
+		}
+
+
     console.log(location);
   var marker = new google.maps.Marker({
     draggable: false,
     position: new google.maps.LatLng(lat, lng),
-	//position: theMap.getCenter(),
+	//position: theMap.getCenter(),,
     visible: true,
     icon: image,
     map: theMap
