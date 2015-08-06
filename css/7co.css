@@ -164,7 +164,8 @@ body {
 	overflow: hidden;
 	osition:absolute;
 	z-index:5;
-	background:url("../images/photo-layer.png") no-repeat;
+	ckground:url("../images/photo-layer.png") no-repeat;
+	background-color: rgba(2, 214, 181,0.5);
 	background-position: center center;
 	background-size:cover;
 	top:0;
@@ -492,6 +493,10 @@ a.retour{
 .lien-site:active{
 	text-decoration: none;
 }
+.s-liste{
+	margin-top: 15px;
+}
+
 .api-twitter div#example1 ul{
 	padding:0;	
 }
