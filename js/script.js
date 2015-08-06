@@ -1,11 +1,5 @@
 $(document).ready(function() {
 	
-	if (StatusBar.isVisible) {
-		$('body, nav').css('margin-top','15px')
-	}
-	
-	
-	
 	var deviceAgent = navigator.userAgent.toLowerCase();
 	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 	if (!agentID) {
