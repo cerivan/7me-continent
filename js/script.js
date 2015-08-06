@@ -5,7 +5,8 @@ $(document).ready(function() {
 	if (!agentID) {
 		navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
 	}else{
-		$('nav').css('padding-top','15px');		
+		$('nav').css('padding-top','15px');
+		$('.s-liste').css('margin-top','15px');	
 	}	
 	
 });
