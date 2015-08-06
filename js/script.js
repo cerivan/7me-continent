@@ -4,8 +4,12 @@ $(document).ready(function() {
 	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 	if (!agentID) {
 		navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
-	}
+	}else{
+		$('nav').css('padding-top','15px');		
+	}	
+	
 });
+
 
 function geoOK(position) {
 	console.log("Récupération géolocalisation OK", position);
