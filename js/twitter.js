@@ -88,7 +88,11 @@ var config1 = {
   "domId": 'example1',
   "maxTweets": 6,
   "enableLinks": true,
-  "showPermalinks": false
+  "showPermalinks": false,
+  "showImages": true,
+  "showInteraction": false,
+  "showTime": false
+
 };
 twitterFetcher.fetch(config1);
 

@@ -198,7 +198,7 @@ function setAllMap(map) {
 }
 
 // Add a marker to the map and push to the array.
-function addMarker(lat, lng, zone) {
+function addMarker(lat, lng, zone, photo) {
     var image = "images/zone"+zone+".png";
     console.log(location);
   var marker = new google.maps.Marker({
@@ -209,6 +209,16 @@ function addMarker(lat, lng, zone) {
     icon: image,
     map: theMap
   });
+  
+  var infowindow = new google.maps.InfoWindow({
+      content: "<img src='"+photo+"'>",
+      maxWidth: 150
+  });
+  
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(theMap,marker);
+  }); 
+ 
   markers.push(marker);
 }
 
@@ -241,7 +251,7 @@ function setMarkers() {
 		
 		$.each( data, function( key, val ) {
 			console.log(val);
-			addMarker(val.lat, val.lng, val.ampleur);
+			addMarker(val.lat, val.lng, val.ampleur, val.photo);
 		});
 
 	});
