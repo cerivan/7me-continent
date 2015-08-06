@@ -119,7 +119,11 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-
+	$(document).one('mobileinit', function () {
+		$.mobile.allowCrossDomainPages = true;
+	});
+    
+    
 	myJson = "http://7eco.cerivan.com/app/getInfos.php";
 	console.log(myJson);
 	$.getJSON( myJson, function( data ) {
