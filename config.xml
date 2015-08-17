@@ -85,7 +85,8 @@
 	</gap:plugin>
 	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
 		<array>
-		  <string>NSLocationAlwaysUsageDescription</string>
+		 <key>NSLocationAlwaysUsageDescription</key>
+		<string>Geolocalisation</string>
 		</array>
 	</gap:config-file>
 	
