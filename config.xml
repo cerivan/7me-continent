@@ -83,6 +83,11 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
+	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false">
+		<array>
+		  <string>NSLocationAlwaysUsageDescription</string>
+		</array>
+	</gap:config-file>
 	
 	<!-- <gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" /> -->
 	

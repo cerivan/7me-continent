@@ -5,9 +5,10 @@ $(document).ready(function() {
 	if (!agentID) {
 		navigator.geolocation.getCurrentPosition(geoOK, geoNOK, {maximumAge: 900000});
 	}else{
-		$('nav').css('padding-top','15px');		
-		$('.s-liste').addClass('ios');			
-	}	
+		$('nav').css('padding-top','15px');
+		$( "body" ).addClass('ios')			
+	}
+	console.log('####',$('body .btn-liste-map p.titre ').width());
 	
 });
 

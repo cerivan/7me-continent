@@ -292,7 +292,7 @@ body {
 	background-color: #50d9bf;
 	bbackground: url("../images/btn_action-map.png") no-repeat top left / 70px 100% #50d9bf;
 	color:#000;
-	padding:10px;
+	padding:5px 10px;
 	mmin-height:70px;
   	text-align:left;
 }
@@ -308,7 +308,7 @@ a.btn-action:hover{
 	font-family: 'AvenirLTStdHeavy', Arial, sans-serif;
 }
 .btn-liste-map p.titre{ 
-	ppadding:10px 5px 0 0;
+	line-height: 14px;
 	margin:0;
 	font-size:1.0em;
 	text-transform:uppercase;
@@ -493,7 +493,7 @@ a.retour{
 .lien-site:active{
 	text-decoration: none;
 }
-.s-liste{
+body.ios .s-liste{
 	margin-top: 15px;
 }
 
@@ -544,7 +544,10 @@ a.retour{
 .api-twitter .tweet{
 	clear: both;	
 }
-
+.navbar-brand sup{
+	text-transform: lowercase;
+	top:0;
+}
 
 
 
