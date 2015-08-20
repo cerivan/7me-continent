@@ -22,7 +22,7 @@ function onSuccess(position) {
     }
     
     var secheltLoc = new google.maps.LatLng(current_lat, current_lng);
-    //alert(secheltLoc);
+    //console.log(secheltLoc);
 
 
     var styles = [
@@ -279,5 +279,5 @@ function setMarkers() {
 
 function onError(error)
 {
-    alert(error) ;
+    console.log(error) ;
 }

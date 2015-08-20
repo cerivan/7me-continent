@@ -18,7 +18,7 @@
 	function getImage() {
 		// Retrieve image file location from specified source
         navigator.camera.getPicture(storePhoto, function(message) {
-				//alert('get picture failed');
+				//console.log('get picture failed');
 			},{
 				quality: 30, 
 				destinationType: Camera.DestinationType.FILE_URI,
@@ -66,7 +66,7 @@
 
         options.params = params;
 		options.chunkedMode  = false;
-        //alert('transferring...');
+        //console.log('transferring...');
 		
 		//console.log(options);
  
@@ -81,12 +81,12 @@
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
-        //alert(r.response);
+        //console.log(r.response);
         window.open("recapitulatif.html",'_self');
     }
 
     function fail(error) {
-        alert("An error has occurred: Code = " + error.code);
+        console.log("An error has occurred: Code = " + error.code);
     }
 	 
 

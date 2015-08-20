@@ -64,7 +64,9 @@
 	<feature name="Camera">
 		 <param name="ios-package" value="CDVCamera" />
     </feature>
-	
+	<feature name="Geolocation">
+		<param name="ios-package" value="CDVLocation" />
+	</feature>
 		
 	<gap:plugin name="org.apache.cordova.inappbrowser" />
 	<gap:plugin name="org.apache.cordova.camera"/>
@@ -81,7 +83,12 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
-	<!-- <gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" /> -->
+	<gap:config-file platform="ios" >
+		<array>
+		 <key>NSLocationUsageDescription</key>
+		<string>Geolocalisation</string>
+		</array>
+	</gap:config-file>
 	
     <!-- Define app icon for each platform. -->
 	<icon src="img/icon_48x48.png" 		width="48" height="48"/>

@@ -9,7 +9,7 @@ function onSuccess(position) {
     var current_lat = sessionStorage.getItem("lat");
     var current_lng = sessionStorage.getItem("lng");
     var secheltLoc = new google.maps.LatLng(current_lat, current_lng);
-    //alert(secheltLoc);
+    //console.log(secheltLoc);
 
 
     var styles = [
@@ -134,5 +134,5 @@ function onSuccess(position) {
 
 function onError(error)
 {
-    alert(error) ;
+    console.log(error) ;
 }

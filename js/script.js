@@ -76,10 +76,10 @@ $(document).ready(function() {
 		
 		//faceBook
 		var fbLoginSuccess = function (userData) {
-			alert("UserInfo: " + JSON.stringify(userData));
+			console.log("UserInfo: " + JSON.stringify(userData));
 			facebookConnectPlugin.getLoginStatus(
 				function (status) {
-					alert("current status: " + JSON.stringify(status));
+					console.log("current status: " + JSON.stringify(status));
 					
 				}
 			);
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 		facebookConnectPlugin.login(["public_profile"],
 			fbLoginSuccess,
-			function (error) { alert("" + error) }
+			function (error) { console.log("" + error) }
 		);
 		
 		// Fin faceBook
