@@ -104,9 +104,11 @@ $(document).ready(function() {
 });
 
 
-
-/* function slide() {
-    window.plugins.nativepagetransitions.slide({
-        "href" : "accueil.html"
-    });
-} */
+ function onLoad()
+{
+     if (typeof navigator.device == "undefined"){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
+        onDeviceReady();
+    }
+ }
