@@ -1,9 +1,11 @@
 /**
  * Created by okalukembi on 03/06/2015.
  */
-$(document).ready(function() {		
+ 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 	navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
-});
+}
 
 var theMap = false;
 var markers = [];
