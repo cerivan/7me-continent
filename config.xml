@@ -83,9 +83,12 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
-	<gap:config-file platform="ios" mode="replace" parent="NSLocationUsageDescription">
+	<gap:config-file platform="ios" mode="replace" parent="CLLocationManager">
 		<array>
-			<string>Geolocation</string>
+			<key>NSLocationWhenInUseUsageDescription</key>
+			<string>Test NSLocationWhenInUseUsageDescription</string>
+			<key>requestWhenInUseAuthorization</key>
+			<string>Test </string>
 		</array>
 	</gap:config-file>
 	
