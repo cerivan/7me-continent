@@ -83,11 +83,8 @@
 		<param name="APP_ID" value="1680952628801790" />
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
-	<gap:config-file platform="ios" parent="NSLocationUsageDescription" overwrite="true">
-		<array>
-		 <key>NSLocationUsageDescription</key>
-		<string>Geolocalisation</string>
-		</array>
+	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="true">
+		<string>Geolocation</string>
 	</gap:config-file>
 	
     <!-- Define app icon for each platform. -->
