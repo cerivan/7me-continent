@@ -84,7 +84,7 @@
 		<param name="APP_NAME" value="SeptiemeContinent" />
 	</gap:plugin>
 	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="true">
-		<string>Geolocation</string>
+		<string></string>
 	</gap:config-file>
 	
     <!-- Define app icon for each platform. -->
