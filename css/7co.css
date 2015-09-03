@@ -571,9 +571,13 @@ body.ios .s-liste{
 .action-infoWindow{
 	float:right;
 }
+.infoWindow img{
+	margin-bottom:7px;
+}
 .infoWindow .info_date{
-    margin-top: 7px;
     display: block;
+    font-size: 11px;
+    float: left;
 }	
 
 
