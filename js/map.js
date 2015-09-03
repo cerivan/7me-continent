@@ -3,11 +3,13 @@
  */
 
 
-$(document).ready(function() {
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 	navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
-	console.log("GEOLOC en cours");
- 	//onSuccess();
-});
+	console.log("GEOLOC en cours"); 
+ 	//onSuccess(); 
+}
 
 var theMap = false;
 var markers = [];
