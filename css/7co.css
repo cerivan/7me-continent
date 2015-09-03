@@ -485,9 +485,9 @@ a.retour{
 
 .lien-site{
 	background-color: white;
-	padding: 15px 0 0 0;
+	padding: 15px 20px 0 20px;
 	font-size: 1.4em;
-
+	height: 40px;
 }
 .lien-site:hover,
 .lien-site:active{
@@ -578,8 +578,13 @@ body.ios .s-liste{
     display: block;
     font-size: 11px;
     float: left;
+}
+.lien-site a{
+	float:left;
 }	
-
+.lien-site a.contact{
+	float: right;
+}
 
 
 
