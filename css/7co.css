@@ -548,10 +548,33 @@ body.ios .s-liste{
 	text-transform: lowercase;
 	top:0;
 }
-
-
-
-
+.col-xs-6:first-child{
+	margin-top:15px;
+}
+.action-infoWindow  span#genant {
+	background-image: url("../images/genant.png"); 
+}
+.action-infoWindow  span#choquant {
+	background-image: url("../images/choquant.png"); 
+}
+.action-infoWindow  span#enorme {
+	background-image: url("../images/enorme.png"); 
+}
+.action-infoWindow  span {
+	display: block;
+    width: 30px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;	
+}
+.action-infoWindow{
+	float:right;
+}
+.infoWindow .info_date{
+    margin-top: 7px;
+    display: block;
+}	
 
 
 
@@ -653,8 +676,6 @@ body.ios .s-liste{
 	}
 	.btn-action-photo p.stitre {
 		font-size:0.8em;	
-	}
-	
 	
 	
 	

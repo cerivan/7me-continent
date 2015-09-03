@@ -1,11 +1,13 @@
 /**
  * Created by okalukembi on 03/06/2015.
  */
- 
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
+
+
+$(document).ready(function() {
 	navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 900000});
-}
+	console.log("GEOLOC en cours");
+ 	//onSuccess();
+});
 
 var theMap = false;
 var markers = [];
@@ -210,7 +212,7 @@ function setAllMap(map) {
 }
 
 // Add a marker to the map and push to the array.
-function addMarker(lat, lng, zone, photo) {
+function addMarker(lat, lng, zone, photo, ampleur, impact, ladate) {
     var image = {
 	    	url: "images/zone"+zone+".png",
 	    	anchor: new google.maps.Point(75,75)
@@ -228,7 +230,7 @@ function addMarker(lat, lng, zone, photo) {
   });
   
   var infowindow = new google.maps.InfoWindow({
-      content: "<img src='"+photo+"'>",
+      content: "<div class='infoWindow'><img src='"+photo+"'><span class='info_date'>Créé le " + ladate + "</span><div class='action-infoWindow'>" + impact + ampleur + "</div>",
       maxWidth: 150
   });
   
@@ -268,7 +270,9 @@ function setMarkers() {
 		
 		$.each( data, function( key, val ) {
 			console.log(val);
-			addMarker(val.lat, val.lng, val.ampleur, val.photo);
+			var imp = (val.impact==0)? '<span id="genant"></span>':((val.impact==1)?'<span id="choquant"></span>':'<span id="enorme"></span>');
+			var amp = (val.ampleur==0)? "5m²":((val.ampleur==1)?"10m²":((val.ampleur==2)?"30m²":"100m²"));
+			addMarker(val.lat, val.lng, val.ampleur, val.photo, amp, imp, val.date);
 		});
 
 	});
