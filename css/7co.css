@@ -548,9 +548,6 @@ body.ios .s-liste{
 	text-transform: lowercase;
 	top:0;
 }
-.col-xs-6:first-child{
-	margin-top:15px;
-}
 .action-infoWindow  span#genant {
 	background-image: url("../images/genant.png"); 
 }
@@ -585,21 +582,83 @@ body.ios .s-liste{
 .lien-site a.contact{
 	float: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.partenaires .col-xs-6{
+	padding:0 !important;
+}
+.partenaires .img-responsive{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 90%; 
+	width: 150px;
+    height: 150px;
+}
+.partenaires .partenaire-eau-seine{
+	background-image: url("../images/partenaire-eau-seine.png");    
+}
+.partenaires .partenaire-suez{
+	background-image: url("../images/partenaire-suez.jpg");    
+}
+.partenaires .partenaire-revolutionr{
+	background-image: url("../images/partenaire-revolutionr.png");    
+}
+.partenaires .partenaire-aircaraibes{
+	background-image: url("../images/partenaire-aircaraibes.jpg");      
+}
+.partenaires .partenaire-aircaraibes{
+	background-image: url("../images/partenaire-aircaraibes.jpg");     
+}
+.partenaires .partenaire-cnrs{
+	background-image: url("../images/partenaire-cnrs.jpg");	    
+}
+.partenaires .partenaire-cnes{
+	background-image: url("../images/partenaire-cnes.png");	    
+}
+.partenaires .partenaire-ocean{
+	background-image: url("../images/partenaire-ocean.jpg");    
+}
+.partenaires .partenaire-cluster{
+	background-image: url("../images/partenaire-cluster.jpg");     
+}
+.partenaires .partenaire-mnhn{
+	background-image: url("../images/partenaire-mnhn.png");	      
+}
+.partenaires .partenaire-institut-ocean{
+	background-image: url("../images/partenaire-institut-ocean.jpg");    
+}
+.partenaires .partenaire-amaboomi{
+	background-image: url("../images/partenaire-amaboomi.png");      
+}
+.partenaires .partenaire-vnf{
+	background-image: url("../images/partenaire-vnf.png");     
+}
+.partenaires .partenaire-climate{
+	background-image: url("../images/partenaire-climate.png");    
+}
+.partenaires .partenaire-algopack{
+	background-image: url("../images/partenaire-algopack.png");     
+}
+.partenaires .partenaire-green{
+	background-image: url("../images/partenaire-green.png");	
+    background-size: 70%;   
+}
+.partenaires .partenaire-explorateurs{
+	background-image: url("../images/partenaire-explorateurs.jpg");	     
+}
+.partenaires .partenaire-deleage{
+	background-image: url("../images/partenaire-deleage.png");	     
+}
+.partenaires .partenaire-degetel{
+	background-image: url("../images/partenaire-degetel.jpg");	     
+}
+.partenaires .partenaire-environnement-solution{
+	background-image: url("../images/partenaire-environnement-solution.png");	     
+}
+.partenaires .partenaire-equalogy{
+	background-image: url("../images/partenaire-equalogy.png");	     
+}
+#navbar ul li a{
+	text-transform: uppercase;
+}
 
 
 
