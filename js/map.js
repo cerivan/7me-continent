@@ -215,9 +215,17 @@ function setAllMap(map) {
 
 // Add a marker to the map and push to the array.
 function addMarker(lat, lng, zone, photo, ampleur, impact, ladate) {
+
+	s = 150;
+	if (zone == 2) s = 100;
+	if (zone == 1) s = 50;
+	if (zone == 0) s = 20;
+	
+
+
     var image = {
 	    	url: "images/zone"+zone+".png",
-	    	anchor: new google.maps.Point(75,75)
+	    	anchor: new google.maps.Point(s,s)
 		}
 
 
@@ -254,8 +262,8 @@ function deleteMarkers() {
 function setMarkers() {
 	
 	console.log(theMap.getCenter());
-	myJson = "http://7eco.cerivan.com/app/listZones.php?bounds="+theMap.getCenter();
-	console.log(myJson);
+	myJson = "http://7eco.cerivan.com/app/listZones.php?bounds="+theMap.getCenter()+"&zoom="+theMap.getZoom();
+	console.log(myJson); 
 	$.getJSON( myJson, function( data ) {
 		console.log(data, data.length);
 	    sessionStorage.setItem("nb_users", data.length);
