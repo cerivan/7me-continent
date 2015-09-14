@@ -75,20 +75,14 @@ $(document).ready(function() {
 	$( ".btn-fbk" ).click(function(){
 		
 		//faceBook
-		var fbLoginSuccess = function (userData) {
-			console.log("UserInfo: " + JSON.stringify(userData));
-			facebookConnectPlugin.getLoginStatus(
-				function (status) {
-					console.log("current status: " + JSON.stringify(status));
-					
-				}
-			);
-		};
+					var fbLoginSuccess = function (userData) {
+				alert("UserInfo: " + JSON.stringify(userData));
+			}
 
-		facebookConnectPlugin.login(["public_profile"],
-			fbLoginSuccess,
-			function (error) { console.log("" + error) }
-		);
+			facebookConnectPlugin.login(["public_profile"],
+				fbLoginSuccess,
+				function (error) { alert("" + error) }
+			);
 		
 		// Fin faceBook
 	});
