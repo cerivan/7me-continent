@@ -15,7 +15,7 @@
 	</author>	 
 	
 	<preference name="permissions" value="none" />
-	<access origin="*" />
+	<access origin="*" subdomains="true" />
 	<preference name="orientation" value="portrait" />
 	<preference name="Fullscreen" value="true" />
 	<!-- to enable individual permissions use the following examples -->	
