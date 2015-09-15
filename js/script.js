@@ -75,20 +75,20 @@ $(document).ready(function() {
 	$( ".btn-fbk" ).click(function(){
 		
 		//faceBook
-				FB.init({
-				  appId      : '1626160201005581',
-				  xfbml      : true,
-				  version    : 'v2.4'
-				});
-			  
+		console.log("hay");
+								var fbLoginSuccess = function (userData) {
+					alert("UserInfo: " + JSON.stringify(userData));
+					facebookConnectPlugin.getAccessToken(function(token) {
+						alert("Token: " + token);
+					}, function(err) {
+						alert("Could not get access token: " + err);
+					});
+				}
 
-			  (function(d, s, id){
-				 var js, fjs = d.getElementsByTagName(s)[0];
-				 if (d.getElementById(id)) {return;}
-				 js = d.createElement(s); js.id = id;
-				 js.src = "//connect.facebook.net/en_US/sdk.js";
-				 fjs.parentNode.insertBefore(js, fjs);
-			   }(document, 'script', 'facebook-jssdk'));
+				facebookConnectPlugin.login(["public_profile"],
+					fbLoginSuccess,
+					function (error) { alert("" + error) }
+				);
 		
 		// Fin faceBook
 	});
