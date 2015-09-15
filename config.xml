@@ -98,6 +98,16 @@
 		 
     <gap:splash src="img/header_640x1136px.png" 	gap:platform="ios"     width="640" height="1136" />
 	<gap:splash src="img/header_640x1136px.jpg" />
+	
+	<gap:config-file platform="ios" parent="NSAppTransportSecurity">
+		<array>
+			<dict>
+				<key>NSAllowsArbitraryLoads</key>
+				<true/>
+			</dict>
+		</array>
+	</gap:config-file>
+</platform>
     
 
 </widget>
