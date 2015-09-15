@@ -75,7 +75,7 @@ $(document).ready(function() {
 	$( ".btn-fbk" ).click(function(){
 		
 		//faceBook
-		console.log("hay");
+		//console.log("hay");
 								var fbLoginSuccess = function (userData) {
 					alert("UserInfo: " + JSON.stringify(userData));
 					facebookConnectPlugin.getAccessToken(function(token) {
