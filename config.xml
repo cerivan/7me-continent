@@ -100,13 +100,14 @@
 	<gap:splash src="img/header_640x1136px.jpg" />
 	
 	<gap:config-file platform="ios" parent="NSAppTransportSecurity">
-		<array>			
+		<array>
+			<dict>
 				<key>NSAllowsArbitraryLoads</key>
 				<true/>
-			
+			</dict>
 		</array>
 	</gap:config-file>
-</platform>
+
     
 
 </widget>
