@@ -104,7 +104,8 @@
 	<gap:splash src="img/screen-iphone-portrait-750h.png" gap:platform="ios" width="750" height="1334" />
 	<gap:splash src="img/screen-iphone-portrait-1242h.png" gap:platform="ios" width="1242" height="2208" />
 	<gap:splash src="img/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024" />
-	<gap:splash gap:platform="android" src="img/splash.jpg" />
+	
+	<gap:splash gap:platform="android" gap:qualifier="port-ldpi" rc="img/splash.jpg" />
 	
 	<gap:config-file platform="ios" parent="NSAppTransportSecurity">
 		<array>
