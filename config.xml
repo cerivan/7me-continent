@@ -94,10 +94,15 @@
     <icon src="img/icon_ipad@2x.png"    gap:platform="ios"        width="152" height="152" />
 	<icon src="img/icon@3x.png"         gap:platform="ios"        width="180" height="180" />
 	
-	<!-- Define app splash screen for each platform. -->
-		 
-    <gap:splash src="img/header_640x1136px.png" 	gap:platform="ios"     width="640" height="1136" />
-	<gap:splash src="img/header_640x1136px.jpg" />
+	<!-- Define app splash screen for each platform. --> 
+
+	<gap:splash src="img/screen-iphone-portrait-568h.png" gap:platform="android" />
+	<gap:splash src="img/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="img/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
+	<gap:splash src="img/screen-iphone-portrait-568h.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="img/screen-iphone-portrait-750h.png" gap:platform="ios" width="750" height="1334" />
+	<gap:splash src="img/screen-iphone-portrait-1242h.png" gap:platform="ios" width="1242" height="2208" />
+	<gap:splash src="img/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024" />
 	
 	<gap:config-file platform="ios" parent="NSAppTransportSecurity">
 		<array>
