@@ -95,8 +95,10 @@
 	<icon src="img/icon@3x.png"         gap:platform="ios"        width="180" height="180" />
 	
 	<!-- Define app splash screen for each platform. --> 
+	<platform name="android">
+	    <splash src="img/screen-iphone-portrait-568h.png" />
+	</platform>
 
-	<gap:splash src="img/screen-iphone-portrait-568h.png" gap:platform="android" />
 	<gap:splash src="img/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480" />
 	<gap:splash src="img/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
 	<gap:splash src="img/screen-iphone-portrait-568h.png" gap:platform="ios" width="640" height="1136" />
