@@ -96,29 +96,11 @@ h1 {
 	width:10%;
 	height:10%;
 	position: absolute;
-	margin-left:45%;
-	margin-top:50%;
+	left:45%;
+	top:45%;
 }
 
 .gmnoprint{display:none;}
-/* @media screen and (min-width:360px) and (max-width:400px){
-	#map_marker_fixed {
-		margin-top:60%;
-	}
-
-}
-@media screen and (max-width:360px) {
-	#map_marker_fixed {
-		margin-top:72%;
-	}
-
-
-
-
-
-}
-
- */
 
 
 
