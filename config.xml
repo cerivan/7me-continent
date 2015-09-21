@@ -18,6 +18,7 @@
 	<access origin="*" />
 	<preference name="orientation" value="portrait" />
 	<preference name="Fullscreen" value="true" />
+	<preference name="target-device" value="handset" />
 	<!-- to enable individual permissions use the following examples -->	
 	<feature name="http://api.phonegap.com/1.0/camera"/>	
 	<feature name="http://api.phonegap.com/1.0/file"/>
