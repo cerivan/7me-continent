@@ -200,7 +200,7 @@ function onSuccess(position) {
    });
     
     setMarkers();
-    google.maps.event.addListener(theMap, 'drag', function() { setMarkers(); } );
+    google.maps.event.addListener(theMap, '', function() { setMarkers(); } );
     
     $("#preloader").slideUp(880);
     
