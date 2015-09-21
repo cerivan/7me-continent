@@ -200,7 +200,7 @@ function onSuccess(position) {
    });
     
     setMarkers();
-    google.maps.event.addListener(theMap, 'dragend', function() { setMarkers(); } );
+    google.maps.event.addListener(theMap, 'drag', function() { setMarkers(); } );
     
     $("#preloader").slideUp(880);
     
@@ -246,6 +246,13 @@ function addMarker(lat, lng, zone, photo, ampleur, impact, ladate) {
   
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(theMap,marker);
+    console.log("hide pin");
+    jQuery("#map_marker_fixed").hide();
+  }); 
+ 
+  google.maps.event.addListener(infowindow, 'closeclick', function() {
+    console.log("display pin");
+    jQuery("#map_marker_fixed").show();
   }); 
  
   markers.push(marker);
