@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	
+	mapHeight = $('#map_canvas').height() - 80;	
+	$('#map_canvas').css('height',mapHeight + 'px');
+	
 	var deviceAgent = navigator.userAgent.toLowerCase();
 	var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
 	if (!agentID) {

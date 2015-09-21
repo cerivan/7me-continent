@@ -473,8 +473,8 @@ a.btn-action:hover{
   background-position:20px 20px;
   text-align:left;
 }
-.gmnoprint,.gm-style-cc{
-	display:none;
+.gm-style-cc{
+	display: block !important;
 }
 .container.recap{
 	margin-top:0px;
